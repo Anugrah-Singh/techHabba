@@ -89,28 +89,10 @@ export const HoveredLink = ({ children, href, onClick, ...rest }) => {
   }
 
   if (isAnchor) {
-    const handleClick = (e) => {
-      e.preventDefault();
-      if (onClick) {
-        onClick();
-      }
-      const targetId = href.substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        const navElement = document.querySelector('[data-nav-root]');
-        const navRect = navElement?.getBoundingClientRect();
-        const navHeight = navRect?.height ?? 0;
-        const extraSpacing = 40; // account for floating navbar offset and breathing space
-        const offset = navHeight + extraSpacing;
-        const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        const targetPosition = Math.max(elementTop - offset, 0);
-        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-      }
-    };
     return (
       <a
         href={href}
-        onClick={handleClick}
+        onClick={onClick}
         {...rest}
         className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white"
       >
