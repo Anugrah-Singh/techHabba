@@ -10,28 +10,8 @@ function TimelineComponent() {
           <p className="mb-8 text-xs font-normal text-neutral-300 md:text-sm">
             Opening ceremony, keynote sessions, and workshops focused on AI technologies and industry insights.
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
-              alt="AI workshop"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
-              alt="keynote session"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop"
-              alt="AI technology"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
-              alt="innovation workshop"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-          </div>
+          {/* images removed: space preserved for layout */}
+          <div className="mb-4" />
         </div>
       ),
     },
@@ -59,28 +39,8 @@ function TimelineComponent() {
               🤝 Networking Sessions
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
-              alt="competition event"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
-              alt="hackathon"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
-              alt="quiz competition"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop"
-              alt="debate session"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-          </div>
+          {/* images removed: space preserved for layout */}
+          <div className="mb-4" />
         </div>
       ),
     },
@@ -108,28 +68,8 @@ function TimelineComponent() {
               🌟 Awards & Recognition
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
-              alt="prize distribution"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
-              alt="closing ceremony"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
-              alt="awards ceremony"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop"
-              alt="celebration"
-              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
-            />
-          </div>
+          {/* images removed: space preserved for layout */}
+          <div className="mb-4" />
         </div>
       ),
     },

@@ -94,7 +94,7 @@ function Hero() {
           className="relative z-10 mt-12 md:mt-20 rounded-2xl md:rounded-3xl border border-neutral-200 bg-neutral-100 p-2 md:p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900">
           <div className="w-full overflow-hidden rounded-lg md:rounded-xl border border-gray-300 dark:border-gray-700">
             <img
-              src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              src="https://images.pexels.com/photos/11308989/pexels-photo-11308989.jpeg"
               alt="Tech Habba event preview"
               className="aspect-[16/9] h-auto w-full object-cover"
               loading="lazy"

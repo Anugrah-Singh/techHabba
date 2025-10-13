@@ -99,7 +99,7 @@ const SkeletonOne = () => {
       <div className="w-full p-2 mx-auto bg-neutral-900 shadow-2xl group h-full">
         <div className="flex flex-1 w-full h-full flex-col space-y-2">
           <img
-            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2940&auto=format&fit=crop"
+            src="https://images.pexels.com/photos/5756659/pexels-photo-5756659.jpeg"
             alt="coding workshop"
             className="w-full max-w-full h-auto aspect-square object-cover object-center rounded-sm"
           />
@@ -113,11 +113,7 @@ const SkeletonOne = () => {
 
 const SkeletonTwo = () => {
   const images = [
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop",
+    "https://images.pexels.com/photos/7046708/pexels-photo-7046708.jpeg",
   ];
 
   const imageVariants = {
@@ -211,18 +207,15 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div className="h-60 md:h-60 flex flex-col items-center relative bg-transparent mt-10">
-      <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-        <svg
-          className="w-16 h-16 text-white"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.75 1.75 0 0018.25 7h-7.5A1.75 1.75 0 009 8.37L6.46 16H9v6a1 1 0 001 1h6a1 1 0 001-1zm-9-6.5l2.5-7.5h7.5l2.5 7.5H11z" />
-        </svg>
-      </div>
+      
       <div className="mt-4 text-center">
-        <p className="text-white text-lg font-semibold">Connect & Collaborate</p>
-        <p className="text-neutral-400 text-sm">Build lasting relationships</p>
+        <img
+            src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg"
+            alt="speaker session"
+            width={800}
+            height={800}
+            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+          />
       </div>
     </div>
   );
