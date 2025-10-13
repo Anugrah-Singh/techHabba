@@ -17,6 +17,7 @@ export const MenuItem = ({
   item,
   children,
   onMouseLeave,
+  handleLinkClick,
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} onMouseLeave={onMouseLeave} className="relative">
@@ -36,14 +37,16 @@ export const MenuItem = ({
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
+                layoutId="active"
                 className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
                 <motion.div
-                  layout // layout ensures smooth animation
+                  layout
                   className="w-max h-full p-4"
                 >
-                  {children}
+                  {React.Children.map(children, (child) =>
+                    React.cloneElement(child, { onClick: handleLinkClick })
+                  )}
                 </motion.div>
               </motion.div>
             </div>
@@ -54,13 +57,10 @@ export const MenuItem = ({
   );
 };
 
-export const Menu = ({
-  children,
-  onMouseLeave,
-}) => {
+export const Menu = ({ children, onMouseLeave }) => {
   return (
     <nav
-      onMouseLeave={onMouseLeave} // resets the state
+      onMouseLeave={onMouseLeave}
       className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
     >
       {children}
@@ -68,37 +68,53 @@ export const Menu = ({
   );
 };
 
-export const ProductItem = ({
-  title,
-  description,
-  href,
-  src,
-}) => {
-  return (
-    <a href={href} className="flex space-x-2">
-      <img
-        src={src}
-        width={140}
-        height={70}
-        alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
-      />
-      <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
-          {title}
-        </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
-          {description}
-        </p>
-      </div>
-    </a>
-  );
-};
+export const HoveredLink = ({ children, href, onClick, ...rest }) => {
+  const isExternal = href.startsWith('http');
+  const isAnchor = href.startsWith('#');
 
-export const HoveredLink = ({ children, href, ...rest }) => {
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        onClick={onClick}
+        {...rest}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white"
+      >
+        {children}
+      </a>
+    );
+  }
+
+  if (isAnchor) {
+    const handleClick = (e) => {
+      e.preventDefault();
+      if (onClick) {
+        onClick();
+      }
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    return (
+      <a
+        href={href}
+        onClick={handleClick}
+        {...rest}
+        className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white"
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <Link
       to={href}
+      onClick={onClick}
       {...rest}
       className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white"
     >

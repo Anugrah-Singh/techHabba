@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Events from '../components/Events';
+import AboutAcharyaSection from '../components/AboutAcharyaSection';
 import TimelineComponent from '../components/TimelineComponent';
 import NewCTA from '../components/NewCTA';
 import Footer from '../components/Footer';
@@ -15,6 +16,7 @@ function Home() {
       <Hero />
       <About />
       <Events />
+      <AboutAcharyaSection />
       <TimelineComponent />
       <NewCTA />
       <Footer />

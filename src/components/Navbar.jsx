@@ -6,6 +6,10 @@ function Navbar({ className }) {
   const [active, setActive] = useState(null);
   const timeoutRef = useRef(null);
 
+  const handleLinkClick = () => {
+    setActive(null);
+  };
+
   const wrappedSetActive = (item) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -39,37 +43,37 @@ function Navbar({ className }) {
         />
       </div>
       <Menu onMouseLeave={handleMouseLeave}>
-        <MenuItem setActive={wrappedSetActive} active={active} item="Home" onMouseLeave={handleMouseLeave}>
+        <MenuItem setActive={wrappedSetActive} active={active} item="Home" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/">Welcome</HoveredLink>
             <HoveredLink href="/about">About Tech Habba</HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem setActive={wrappedSetActive} active={active} item="About Acharya" onMouseLeave={handleMouseLeave}>
+        <MenuItem setActive={wrappedSetActive} active={active} item="About Acharya" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/about-acharya">About Acharya</HoveredLink>
+            <HoveredLink href="#about-acharya">About Acharya</HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem setActive={wrappedSetActive} active={active} item="Events" onMouseLeave={handleMouseLeave}>
+        <MenuItem setActive={wrappedSetActive} active={active} item="Events" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/events">All Events</HoveredLink>
             <HoveredLink href="/workshops">Workshops</HoveredLink>
             <HoveredLink href="/competitions">Competitions</HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem setActive={wrappedSetActive} active={active} item="Speakers" onMouseLeave={handleMouseLeave}>
+        <MenuItem setActive={wrappedSetActive} active={active} item="Speakers" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/speakers">Featured Speakers</HoveredLink>
             <HoveredLink href="/schedule">Schedule</HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem setActive={wrappedSetActive} active={active} item="Sponsors" onMouseLeave={handleMouseLeave}>
+        <MenuItem setActive={wrappedSetActive} active={active} item="Sponsors" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/sponsors">Our Sponsors</HoveredLink>
             <HoveredLink href="/partners">Partners</HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem setActive={wrappedSetActive} active={active} item="Contact" onMouseLeave={handleMouseLeave}>
+        <MenuItem setActive={wrappedSetActive} active={active} item="Contact" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/contact">Get in Touch</HoveredLink>
             <HoveredLink href="/register">Register</HoveredLink>
