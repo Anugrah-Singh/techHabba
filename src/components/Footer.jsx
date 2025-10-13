@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { cn } from '../lib/utils';
 
-function Footer() {
+function Footer({ className }) {
   const socialLinks = [
     { icon: <FaGithub />, href: 'https://github.com' },
     { icon: <FaTwitter />, href: 'https://twitter.com' },
@@ -10,7 +11,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-white py-8 md:py-12 px-4">
+    <footer className={cn('bg-black text-white py-8 md:py-12 px-4', className)}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
           <div className="text-center md:text-left">

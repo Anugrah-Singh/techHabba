@@ -66,7 +66,12 @@ function Hero() {
             delay: 1,
           }}
           className="relative z-10 mt-6 md:mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
-          <button className="w-full sm:w-60 transform rounded-lg bg-black px-6 py-3 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+          <button
+            onClick={() => {
+              const el = document.getElementById('events');
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
+            className="w-full sm:w-60 transform rounded-lg bg-black px-6 py-3 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
             Explore Events
           </button>
           <button className="w-full sm:w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">

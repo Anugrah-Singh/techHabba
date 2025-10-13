@@ -11,16 +11,21 @@ import { BackgroundLines } from '../ui/background-lines';
 
 function Home() {
   return (
-    <BackgroundLines className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Events />
-      <AboutAcharyaSection />
-      <TimelineComponent />
-      <NewCTA />
-      <Footer />
-    </BackgroundLines>
+    <div className="min-h-screen bg-black">
+      <BackgroundLines className="absolute inset-0" />
+      <div className="relative z-10">
+        <Navbar />
+        <main className="pt-24 md:pt-32">
+          <Hero />
+          <About />
+          <Events />
+          <AboutAcharyaSection />
+          <TimelineComponent />
+          <NewCTA />
+        </main>
+        <Footer />
+      </div>
+    </div>
   );
 }
 

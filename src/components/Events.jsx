@@ -9,8 +9,7 @@ export default function Events() {
       description:
         "Hands-on learning experiences with cutting-edge technologies and expert guidance.",
       skeleton: <SkeletonOne />,
-      className:
-        "col-span-1 md:col-span-2 lg:col-span-4 border-b lg:border-r dark:border-neutral-800 md:border-neutral-800",
+      className: "border-b lg:border-r dark:border-neutral-800 md:border-neutral-800",
       mobileClassName: "mb-4 md:mb-0"
     },
     {
@@ -18,7 +17,7 @@ export default function Events() {
       description:
         "Challenge yourself in coding contests, hackathons, and innovation challenges.",
       skeleton: <SkeletonTwo />,
-      className: "border-b col-span-1 md:col-span-2 lg:col-span-2 dark:border-neutral-800 md:border-neutral-800",
+      className: "border-b dark:border-neutral-800 md:border-neutral-800",
       mobileClassName: "mb-4 md:mb-0"
     },
     {
@@ -26,8 +25,7 @@ export default function Events() {
       description:
         "Learn from industry leaders, innovators, and tech visionaries sharing their insights.",
       skeleton: <SkeletonThree />,
-      className:
-        "col-span-1 md:col-span-1 lg:col-span-3 lg:border-r dark:border-neutral-800 md:border-neutral-800",
+      className: "lg:border-r dark:border-neutral-800 md:border-neutral-800",
       mobileClassName: "mb-4 md:mb-0"
     },
     {
@@ -35,13 +33,13 @@ export default function Events() {
       description:
         "Connect with fellow tech enthusiasts, potential collaborators, and industry professionals.",
       skeleton: <SkeletonFour />,
-      className: "col-span-1 md:col-span-1 lg:col-span-3 border-b lg:border-none dark:border-neutral-800 md:border-neutral-800",
+      className: "border-b lg:border-none dark:border-neutral-800 md:border-neutral-800",
       mobileClassName: "mb-0"
     },
   ];
 
   return (
-    <div className="relative z-20 py-10 md:py-20 lg:py-40 max-w-7xl mx-auto">
+    <div id="events" className="relative z-20 py-10 md:py-20 lg:py-40 max-w-7xl mx-auto">
       <div className="px-4 md:px-8">
         <h4 className="text-2xl md:text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
           Experience the Future of Technology
@@ -53,7 +51,8 @@ export default function Events() {
       </div>
 
       <div className="relative px-4 md:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 mt-8 md:mt-12 gap-4 md:gap-0 md:xl:border rounded-md dark:border-neutral-800">
+        {/* Responsive grid: 1 col on mobile, 2 on md/tablet, 3 on lg, 4 on xl+ */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 md:mt-12 gap-4 md:gap-6 rounded-md dark:border-neutral-800">
           {events.map((event) => (
             <EventCard key={event.title} className={`${event.className} ${event.mobileClassName || ''}`}>
               <EventTitle>{event.title}</EventTitle>
@@ -69,7 +68,10 @@ export default function Events() {
 
 const EventCard = ({ children, className }) => {
   return (
-    <div className={cn(`p-4 md:p-6 lg:p-8 relative overflow-hidden bg-neutral-900/50 md:bg-transparent rounded-lg md:rounded-none border md:border-0 border-neutral-800`, className)}>
+    <div className={cn(
+      `p-4 md:p-6 lg:p-8 relative overflow-hidden bg-neutral-900/50 md:bg-transparent rounded-lg md:rounded-none border md:border-0 border-neutral-800`,
+      className
+    )}>
       {children}
     </div>
   );
@@ -77,7 +79,7 @@ const EventCard = ({ children, className }) => {
 
 const EventTitle = ({ children }) => {
   return (
-    <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-lg md:text-xl lg:text-2xl md:leading-snug">
+    <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-base md:text-lg lg:text-xl leading-snug">
       {children}
     </p>
   );
@@ -85,13 +87,7 @@ const EventTitle = ({ children }) => {
 
 const EventDescription = ({ children }) => {
   return (
-    <p
-      className={cn(
-        "text-sm md:text-base max-w-4xl text-left mx-auto",
-        "text-neutral-400 text-center font-normal",
-        "text-left max-w-sm mx-0 md:text-sm my-2"
-      )}
-    >
+    <p className={cn("text-sm md:text-base max-w-4xl text-neutral-400 font-normal my-2") }>
       {children}
     </p>
   );
@@ -99,15 +95,13 @@ const EventDescription = ({ children }) => {
 
 const SkeletonOne = () => {
   return (
-    <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full p-5 mx-auto bg-neutral-900 shadow-2xl group h-full">
+    <div className="relative flex flex-col py-4 px-2 gap-4 h-full">
+      <div className="w-full p-2 mx-auto bg-neutral-900 shadow-2xl group h-full">
         <div className="flex flex-1 w-full h-full flex-col space-y-2">
           <img
             src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2940&auto=format&fit=crop"
             alt="coding workshop"
-            width={800}
-            height={800}
-            className="h-full w-full aspect-square object-cover object-center rounded-sm"
+            className="w-full max-w-full h-auto aspect-square object-cover object-center rounded-sm"
           />
         </div>
       </div>
@@ -156,9 +150,7 @@ const SkeletonTwo = () => {
             <img
               src={image}
               alt="competition images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0 max-w-full h-auto"
             />
           </motion.div>
         ))}
@@ -175,13 +167,11 @@ const SkeletonTwo = () => {
             whileTap="whileTap"
             className="rounded-xl -mr-4 mt-4 p-1 bg-neutral-800 border-neutral-700 border shrink-0 overflow-hidden"
           >
-            <img
-              src={image}
-              alt="competition images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
-            />
+              <img
+                src={image}
+                alt="competition images"
+                className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0 max-w-full h-auto"
+              />
           </motion.div>
         ))}
       </div>

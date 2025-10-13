@@ -14,30 +14,22 @@ function TimelineComponent() {
             <img
               src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
               alt="AI workshop"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
               alt="keynote session"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop"
               alt="AI technology"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
               alt="innovation workshop"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
           </div>
         </div>
@@ -71,30 +63,22 @@ function TimelineComponent() {
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
               alt="competition event"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
               alt="hackathon"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
               alt="quiz competition"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop"
               alt="debate session"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
           </div>
         </div>
@@ -128,30 +112,22 @@ function TimelineComponent() {
             <img
               src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop"
               alt="prize distribution"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
               alt="closing ceremony"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
               alt="awards ceremony"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
             <img
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2940&auto=format&fit=crop"
               alt="celebration"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-lg md:h-44 lg:h-60"
+              className="w-full max-w-full h-auto rounded-lg object-cover shadow-lg h-20 md:h-44 lg:h-60"
             />
           </div>
         </div>

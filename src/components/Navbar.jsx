@@ -37,10 +37,13 @@ function Navbar({ className }) {
       ) : (
         /* Desktop Navigation */
         <div
-          className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+          className={cn(
+            "fixed top-10 inset-x-0 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto z-50",
+            className
+          )}
         >
           {/* TBO Logo on the right */}
-          <div className="absolute right-10 top-1/2 transform -translate-y-1/2 z-50">
+          <div className="absolute right-4 md:right-10 top-1/2 transform -translate-y-1/2 z-50">
             <img
               src="/TBO black (1).png"
               alt="TBO Logo"
