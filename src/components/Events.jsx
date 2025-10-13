@@ -10,14 +10,16 @@ export default function Events() {
         "Hands-on learning experiences with cutting-edge technologies and expert guidance.",
       skeleton: <SkeletonOne />,
       className:
-        "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
+        "col-span-1 md:col-span-2 lg:col-span-4 border-b lg:border-r dark:border-neutral-800 md:border-neutral-800",
+      mobileClassName: "mb-4 md:mb-0"
     },
     {
       title: "Tech Competitions",
       description:
         "Challenge yourself in coding contests, hackathons, and innovation challenges.",
       skeleton: <SkeletonTwo />,
-      className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
+      className: "border-b col-span-1 md:col-span-2 lg:col-span-2 dark:border-neutral-800 md:border-neutral-800",
+      mobileClassName: "mb-4 md:mb-0"
     },
     {
       title: "Speaker Sessions",
@@ -25,33 +27,35 @@ export default function Events() {
         "Learn from industry leaders, innovators, and tech visionaries sharing their insights.",
       skeleton: <SkeletonThree />,
       className:
-        "col-span-1 lg:col-span-3 lg:border-r dark:border-neutral-800",
+        "col-span-1 md:col-span-1 lg:col-span-3 lg:border-r dark:border-neutral-800 md:border-neutral-800",
+      mobileClassName: "mb-4 md:mb-0"
     },
     {
       title: "Networking Events",
       description:
         "Connect with fellow tech enthusiasts, potential collaborators, and industry professionals.",
       skeleton: <SkeletonFour />,
-      className: "col-span-1 lg:col-span-3 border-b lg:border-none",
+      className: "col-span-1 md:col-span-1 lg:col-span-3 border-b lg:border-none dark:border-neutral-800 md:border-neutral-800",
+      mobileClassName: "mb-0"
     },
   ];
 
   return (
-    <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
-      <div className="px-8">
-        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
+    <div className="relative z-20 py-10 md:py-20 lg:py-40 max-w-7xl mx-auto">
+      <div className="px-4 md:px-8">
+        <h4 className="text-2xl md:text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
           Experience the Future of Technology
         </h4>
 
-        <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-neutral-300 text-center font-normal">
+        <p className="text-sm md:text-base lg:text-base max-w-2xl my-4 mx-auto text-neutral-300 text-center font-normal">
           From coding workshops to innovation challenges, Tech Habba offers everything you need to explore, learn, and excel in the world of technology.
         </p>
       </div>
 
-      <div className="relative">
-        <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
+      <div className="relative px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 mt-8 md:mt-12 gap-4 md:gap-0 md:xl:border rounded-md dark:border-neutral-800">
           {events.map((event) => (
-            <EventCard key={event.title} className={event.className}>
+            <EventCard key={event.title} className={`${event.className} ${event.mobileClassName || ''}`}>
               <EventTitle>{event.title}</EventTitle>
               <EventDescription>{event.description}</EventDescription>
               <div className="h-full w-full">{event.skeleton}</div>
@@ -65,7 +69,7 @@ export default function Events() {
 
 const EventCard = ({ children, className }) => {
   return (
-    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
+    <div className={cn(`p-4 md:p-6 lg:p-8 relative overflow-hidden bg-neutral-900/50 md:bg-transparent rounded-lg md:rounded-none border md:border-0 border-neutral-800`, className)}>
       {children}
     </div>
   );
@@ -73,7 +77,7 @@ const EventCard = ({ children, className }) => {
 
 const EventTitle = ({ children }) => {
   return (
-    <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-xl md:text-2xl md:leading-snug">
+    <p className="max-w-5xl mx-auto text-left tracking-tight text-white text-lg md:text-xl lg:text-2xl md:leading-snug">
       {children}
     </p>
   );

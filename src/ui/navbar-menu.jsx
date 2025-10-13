@@ -60,6 +60,7 @@ export const MenuItem = ({
 export const Menu = ({ children, onMouseLeave }) => {
   return (
     <nav
+      data-nav-root
       onMouseLeave={onMouseLeave}
       className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
     >
@@ -96,7 +97,14 @@ export const HoveredLink = ({ children, href, onClick, ...rest }) => {
       const targetId = href.substring(1);
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        const navElement = document.querySelector('[data-nav-root]');
+        const navRect = navElement?.getBoundingClientRect();
+        const navHeight = navRect?.height ?? 0;
+        const extraSpacing = 40; // account for floating navbar offset and breathing space
+        const offset = navHeight + extraSpacing;
+        const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const targetPosition = Math.max(elementTop - offset, 0);
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
     };
     return (

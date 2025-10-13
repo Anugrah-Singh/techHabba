@@ -160,12 +160,12 @@ function TimelineComponent() {
   ];
 
   return (
-    <div className="relative w-full overflow-clip py-20">
-      <div className="px-8 mb-12">
-        <h2 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
+    <div className="relative w-full overflow-clip py-10 md:py-20">
+      <div className="px-4 md:px-8 mb-8 md:mb-12">
+        <h2 className="text-2xl md:text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
           Event Schedule
         </h2>
-        <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-neutral-300 text-center font-normal">
+        <p className="text-sm md:text-base lg:text-base max-w-2xl my-4 mx-auto text-neutral-300 text-center font-normal">
           Join us for three days of innovation, learning, and competition at Tech Habba 2024.
         </p>
       </div>

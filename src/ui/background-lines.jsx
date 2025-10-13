@@ -15,11 +15,11 @@ export const BackgroundLines = ({
       )}
     >
       {/* Acharya Logo in top left */}
-      <div className="absolute top-4 left-4 z-50">
+      <div className="absolute top-2 left-2 md:top-4 md:left-4 z-50">
         <img
           src="/Acharya white logo.png"
           alt="Acharya Logo"
-          className="h-20 w-auto"
+          className="h-12 md:h-16 lg:h-20 w-auto"
         />
       </div>
       {/* Animated background lines */}

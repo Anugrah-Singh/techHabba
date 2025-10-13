@@ -3,10 +3,32 @@ import { motion } from "framer-motion";
 
 export const Timeline = ({ data }) => {
   return (
-    <div className="w-full bg-black font-sans md:px-10">
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+    <div className="w-full bg-black font-sans px-4 md:px-10">
+      <div className="max-w-7xl mx-auto py-10 md:py-20 px-0 md:px-8 lg:px-10">
         <div className="w-full">
-          <div className="relative wrap overflow-hidden p-10 h-full">
+          {/* Mobile Layout */}
+          <div className="md:hidden space-y-8">
+            {data.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+                className="bg-gray-900 rounded-lg shadow-xl p-4"
+              >
+                <div className="flex items-center mb-3">
+                  <div className="flex items-center justify-center bg-gray-800 w-8 h-8 rounded-full mr-3">
+                    <span className="font-semibold text-sm text-white">{idx + 1}</span>
+                  </div>
+                  <h3 className="font-bold text-white text-lg">{item.title}</h3>
+                </div>
+                <div className="text-gray-300">{item.content}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden md:block relative wrap overflow-hidden p-10 h-full">
             <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2 transform -translate-x-1/2"></div>
 
             {data.map((item, idx) => (
