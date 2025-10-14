@@ -38,7 +38,7 @@ function Navbar({ className }) {
         /* Desktop Navigation */
         <div
           className={cn(
-            "fixed top-10 inset-x-0 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto z-50",
+            "fixed top-10 inset-x-0 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto z-50 bg-black",
             className
           )}
         >
@@ -53,38 +53,38 @@ function Navbar({ className }) {
           <Menu onMouseLeave={handleMouseLeave}>
             <MenuItem setActive={wrappedSetActive} active={active} item="Home" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/">Welcome</HoveredLink>
-                <HoveredLink href="/about">About Tech Habba</HoveredLink>
+                <HoveredLink href="/" className="text-white">Welcome</HoveredLink>
+                <HoveredLink href="/about" className="text-white">About Tech Habba</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={wrappedSetActive} active={active} item="About Acharya" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="#about-acharya">About Acharya</HoveredLink>
+                <HoveredLink href="#about-acharya" className="text-white">About Acharya</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={wrappedSetActive} active={active} item="Events" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/events">All Events</HoveredLink>
-                <HoveredLink href="/workshops">Workshops</HoveredLink>
-                <HoveredLink href="/competitions">Competitions</HoveredLink>
+                <HoveredLink href="/events" className="text-white">All Events</HoveredLink>
+                <HoveredLink href="/workshops" className="text-white">Workshops</HoveredLink>
+                <HoveredLink href="/competitions" className="text-white">Competitions</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={wrappedSetActive} active={active} item="Speakers" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/speakers">Featured Speakers</HoveredLink>
-                <HoveredLink href="/schedule">Schedule</HoveredLink>
+                <HoveredLink href="/speakers" className="text-white">Featured Speakers</HoveredLink>
+                <HoveredLink href="/schedule" className="text-white">Schedule</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={wrappedSetActive} active={active} item="Sponsors" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/sponsors">Our Sponsors</HoveredLink>
-                <HoveredLink href="/partners">Partners</HoveredLink>
+                <HoveredLink href="/sponsors" className="text-white">Our Sponsors</HoveredLink>
+                <HoveredLink href="/partners" className="text-white">Partners</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={wrappedSetActive} active={active} item="Contact" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
               <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/contact">Get in Touch</HoveredLink>
-                <HoveredLink href="/register">Register</HoveredLink>
+                <HoveredLink href="/contact" className="text-white">Get in Touch</HoveredLink>
+                <HoveredLink href="/register" className="text-white">Register</HoveredLink>
               </div>
             </MenuItem>
           </Menu>

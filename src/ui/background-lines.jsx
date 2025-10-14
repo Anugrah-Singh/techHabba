@@ -19,7 +19,7 @@ export const BackgroundLines = ({
         <img
           src="/Acharya white logo.png"
           alt="Acharya Logo"
-          className="h-12 md:h-16 lg:h-20 w-auto"
+          className="w-10 md:w-14 lg:w-20 h-auto max-w-full"
         />
       </div>
       {/* Animated background lines */}

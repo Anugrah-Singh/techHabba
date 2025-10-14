@@ -11,7 +11,7 @@ function Footer({ className }) {
   ];
 
   return (
-    <footer className={cn('bg-black text-white py-8 md:py-12 px-4', className)}>
+  <footer className={cn('bg-black text-white py-8 md:py-12 px-4', className)}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
           <div className="text-center md:text-left">
@@ -25,7 +25,7 @@ function Footer({ className }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl text-gray-400 hover:text-white transition-colors duration-300 p-2 hover:bg-gray-800 rounded-full"
+                className="text-xl md:text-2xl text-gray-400 hover:text-white transition-colors duration-300 p-2 hover:bg-gray-900 rounded-full"
                 aria-label={`Visit our ${link.href.split('.')[1]} page`}
               >
                 {link.icon}
@@ -33,7 +33,7 @@ function Footer({ className }) {
             ))}
           </div>
         </div>
-        <div className="mt-6 md:mt-8 border-t border-gray-800 pt-4 md:pt-6 text-center text-gray-500">
+  <div className="mt-6 md:mt-8 border-t border-gray-900 pt-4 md:pt-6 text-center text-gray-500">
           <p className="text-sm md:text-base">&copy; {new Date().getFullYear()} Tech Habba. All rights reserved.</p>
           <p className="text-xs md:text-sm mt-1 md:mt-2">
             Designed and Developed by Acharya Institutes
