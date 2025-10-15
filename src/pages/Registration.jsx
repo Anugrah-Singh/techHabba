@@ -14,6 +14,10 @@ const events = [
 ];
 
 export default function Registration() {
+    const handleRegisterClick = () => {
+        window.location.href = "https://www.acharyaerptech.in/ExternalPayment/243";
+    };
+
     return (
         <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center font-sans mt-8">
             <h1 className="text-4xl  mb-8 tracking-wider font-bold">Event Registration</h1>
@@ -35,7 +39,10 @@ export default function Registration() {
                     </tbody>
                 </table>
                 <div className="mt-8 text-center">
-                    <button className="bg-green-400 text-gray-900 border-none rounded-lg px-8 py-3 text-lg font-bold cursor-pointer shadow-md hover:bg-green-300 transition">
+                    <button
+                        className="bg-green-400 text-gray-900 border-none rounded-lg px-8 py-3 text-lg font-bold cursor-pointer shadow-md hover:bg-green-300 transition"
+                        onClick={handleRegisterClick}
+                    >
                         Register Now
                     </button>
                 </div>
