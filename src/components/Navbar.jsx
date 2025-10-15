@@ -55,10 +55,6 @@ function Navbar({ className }) {
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/" className="text-white">Welcome</HoveredLink>
                 <HoveredLink href="/about" className="text-white">About Tech Habba</HoveredLink>
-              </div>
-            </MenuItem>
-            <MenuItem setActive={wrappedSetActive} active={active} item="About Acharya" onMouseLeave={handleMouseLeave} handleLinkClick={handleLinkClick}>
-              <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="#about-acharya" className="text-white">About Acharya</HoveredLink>
               </div>
             </MenuItem>

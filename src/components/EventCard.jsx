@@ -11,7 +11,7 @@ export function EventCard({ title, subtitle, image, tag, id }) {
   return (
     <CometCard>
       <div
-        className="my-6 flex w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:my-12 md:p-4"
+        className="my-6 flex w-full max-w-xs cursor-pointer flex-col rounded-[16px] border-0 bg-[#1F2121] p-4 saturate-0 md:my-12"
         style={{
           transformStyle: "preserve-3d",
           transform: "none",
@@ -19,18 +19,15 @@ export function EventCard({ title, subtitle, image, tag, id }) {
         }}
         onClick={handleClick}
       >
-        <div className="mx-2 flex-1">
-          <div className="relative mt-2 aspect-[3/4] w-full">
+        <div className="w-full">
+          <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[16px]">
             <img
               loading="lazy"
-              className="absolute inset-0 w-full h-full rounded-[16px] bg-[#000000] object-cover contrast-75"
+              className="w-full h-full rounded-[16px] bg-[#000000] object-cover contrast-75"
               alt={title + " background"}
               src={image}
               style={{
                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
-                opacity: 1,
-                maxWidth: '100%',
-                height: 'auto',
               }}
             />
           </div>
