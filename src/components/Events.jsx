@@ -66,7 +66,8 @@ const eventNameToIdMap = {
   "Chess Tournament": "chess",
   "BGMI": "bgmi",
   "FIFA": "fifa",
-  "Valorant Tournament": "valorant"
+  "Valorant Tournament": "valorant",
+  "Ideathon": "ideathon"
 };
 
 export default function Events() {
