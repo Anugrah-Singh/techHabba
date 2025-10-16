@@ -1,7 +1,7 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { cn } from "../lib/utils";
 import { CometCard } from "./comet-card";
+import { ExpandableEventCard } from "./ExpandableEventCard";
 import eventsData from "../assets/events.json";
 import eventPageData from "../assets/event-page.json";
 import { 
@@ -71,114 +71,122 @@ const eventNameToIdMap = {
 };
 
 export default function Events() {
-  const navigate = useNavigate();
+  const [activeEvent, setActiveEvent] = useState(null);
   const events = eventsData.events;
 
-  // Get event ID for navigation
-  const getEventId = (eventName) => {
+  // Get event data from event-page.json
+  const getEventData = (eventName) => {
     // First try direct mapping
-    if (eventNameToIdMap[eventName]) {
-      return eventNameToIdMap[eventName];
+    const eventId = eventNameToIdMap[eventName];
+    if (eventId) {
+      return eventPageData.events.find(e => e.id === eventId);
     }
     // Then try to find by name match in event-page.json
-    const detailEvent = eventPageData.events.find(e => e.name === eventName);
-    return detailEvent ? detailEvent.id : null;
+    return eventPageData.events.find(e => e.name === eventName);
   };
 
   const handleEventClick = (event) => {
-    const eventId = getEventId(event.name);
-    if (eventId) {
-      navigate(`/events/${eventId}`);
+    const eventData = getEventData(event.name);
+    if (eventData) {
+      setActiveEvent({ ...event, eventData });
     }
   };
 
   return (
-    <div id="events" className="relative z-20 py-10 md:py-20 lg:py-40 max-w-7xl mx-auto">
-      <div className="px-4 md:px-8">
-        <h4 className="text-2xl md:text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
-          Explore Our Events
-        </h4>
+    <>
+      <ExpandableEventCard 
+        active={activeEvent} 
+        setActive={setActiveEvent}
+        eventData={activeEvent?.eventData}
+      />
+      
+      <div id="events" className="relative z-20 py-10 md:py-20 lg:py-40 max-w-7xl mx-auto">
+        <div className="px-4 md:px-8">
+          <h4 className="text-2xl md:text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
+            Explore Our Events
+          </h4>
 
-        <p className="text-sm md:text-base lg:text-base max-w-2xl my-4 mx-auto text-neutral-300 text-center font-normal">
-          From coding workshops to gaming tournaments, Tech Habba offers a diverse range of events for everyone.
-        </p>
-      </div>
+          <p className="text-sm md:text-base lg:text-base max-w-2xl my-4 mx-auto text-neutral-300 text-center font-normal">
+            From coding workshops to gaming tournaments, Tech Habba offers a diverse range of events for everyone.
+          </p>
+        </div>
 
-      <div className="relative px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 md:mt-12 gap-6">
-          {events.map((event) => {
-            const IconComponent = iconMap[event.icon] || Code;
-            const colors = categoryColors[event.category] || categoryColors["Technical"];
-            
-            const eventId = getEventId(event.name);
-            const isClickable = eventId !== null;
-            
-            return (
-              <CometCard 
-                key={event.id}
-                className="h-full"
-              >
-                <div 
-                  className={cn(
-                    "relative h-full p-6 rounded-2xl bg-gradient-to-br border backdrop-blur-sm",
-                    colors.card,
-                    "flex flex-col justify-between min-h-[280px]",
-                    isClickable && "cursor-pointer transition-all duration-300 hover:scale-105 hover:border-opacity-80"
-                  )}
-                  onClick={() => isClickable && handleEventClick(event)}
+        <div className="relative px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 md:mt-12 gap-6">
+            {events.map((event) => {
+              const IconComponent = iconMap[event.icon] || Code;
+              const colors = categoryColors[event.category] || categoryColors["Technical"];
+              
+              const eventData = getEventData(event.name);
+              const isClickable = eventData !== null && eventData !== undefined;
+              
+              return (
+                <CometCard 
+                  key={event.id}
+                  className="h-full"
                 >
-                  {/* Category Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span className={cn(
-                      "px-3 py-1 text-xs font-medium rounded-full backdrop-blur-sm border",
-                      colors.badge
-                    )}>
-                      {event.category}
-                    </span>
-                  </div>
-                  
-                  {/* Icon */}
-                  <div className="mb-4">
-                    <div className={cn(
-                      "w-14 h-14 rounded-xl backdrop-blur-sm flex items-center justify-center border",
-                      colors.icon
-                    )}>
-                      {typeof IconComponent === 'function' ? (
-                        <IconComponent className="w-7 h-7" />
-                      ) : (
-                        <IconComponent />
-                      )}
+                  <div 
+                    className={cn(
+                      "relative h-full p-6 rounded-2xl bg-gradient-to-br border backdrop-blur-sm",
+                      colors.card,
+                      "flex flex-col justify-between min-h-[280px]",
+                      isClickable && "cursor-pointer transition-all duration-300 hover:scale-105 hover:border-opacity-80"
+                    )}
+                    onClick={() => isClickable && handleEventClick(event)}
+                  >
+                    {/* Category Badge */}
+                    <div className="absolute top-4 right-4">
+                      <span className={cn(
+                        "px-3 py-1 text-xs font-medium rounded-full backdrop-blur-sm border",
+                        colors.badge
+                      )}>
+                        {event.category}
+                      </span>
                     </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {event.name}
-                    </h3>
-                    <p className="text-sm text-neutral-300 leading-relaxed">
-                      {event.description}
-                    </p>
-                  </div>
-                  
-                  {/* Click indicator for events with detail pages */}
-                  {isClickable && (
-                    <div className="mt-4 flex items-center gap-2 text-cyan-400 text-sm font-medium">
-                      <span>View Details</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    
+                    {/* Icon */}
+                    <div className="mb-4">
+                      <div className={cn(
+                        "w-14 h-14 rounded-xl backdrop-blur-sm flex items-center justify-center border",
+                        colors.icon
+                      )}>
+                        {typeof IconComponent === 'function' ? (
+                          <IconComponent className="w-7 h-7" />
+                        ) : (
+                          <IconComponent />
+                        )}
+                      </div>
                     </div>
-                  )}
-                  
-                  {/* Decorative gradient overlay */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-                </div>
-              </CometCard>
-            );
-          })}
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {event.name}
+                      </h3>
+                      <p className="text-sm text-neutral-300 leading-relaxed">
+                        {event.description}
+                      </p>
+                    </div>
+                    
+                    {/* Click indicator for events with detail pages */}
+                    {isClickable && (
+                      <div className="mt-4 flex items-center gap-2 text-cyan-400 text-sm font-medium">
+                        <span>View Details</span>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    )}
+                    
+                    {/* Decorative gradient overlay */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                </CometCard>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
