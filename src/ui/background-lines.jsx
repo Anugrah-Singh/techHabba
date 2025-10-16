@@ -10,16 +10,16 @@ export const BackgroundLines = ({
   return (
     <div
       className={cn(
-        "relative w-full bg-black",
+        "relative w-full max-w-full bg-black overflow-hidden",
         className
       )}
     >
-      {/* Acharya Logo in top left */}
-      <div className="absolute top-2 left-2 md:top-4 md:left-4 z-50">
+      {/* Acharya Logo - right on mobile, left on desktop */}
+      <div className="absolute top-2 right-2 md:top-4 md:left-4 md:right-auto z-50">
         <img
           src="/Acharya white logo.png"
           alt="Acharya Logo"
-          className="w-10 md:w-14 lg:w-20 h-auto max-w-full"
+          className="h-12 md:h-16 lg:h-20 w-auto"
         />
       </div>
       {/* Animated background lines */}

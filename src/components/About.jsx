@@ -5,9 +5,9 @@ const words = `Tech Habba is where innovation meets inspiration. Join thousands 
 
 function About() {
   return (
-    <div className="py-20 px-4 max-w-4xl mx-auto">
+    <div id="about" className="py-20 px-4 max-w-4xl mx-auto">
       <div className="text-center mb-12">
-  <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
           About Tech Habba
         </h2>
       </div>

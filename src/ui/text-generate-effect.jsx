@@ -17,10 +17,10 @@ export const TextGenerateEffect = ({
         {
           opacity: 1,
         },
-          {
-            duration: 0.7,
-            delay: stagger(0.07),
-          }
+        {
+          duration: 0.5,
+          delay: stagger(0.05),
+        }
       );
     }
   }, [isInView, animate]);
@@ -32,7 +32,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="text-white opacity-0"
+              className="text-black dark:text-white opacity-0"
             >
               {word}{" "}
             </motion.span>

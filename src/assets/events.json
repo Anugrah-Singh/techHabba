@@ -1,0 +1,102 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Workshop",
+      "category": "Technical",
+      "description": "Hands-on workshop to enhance your technical skills",
+      "icon": "book-open"
+    },
+    {
+      "id": 2,
+      "name": "Competitive Programming (CP)",
+      "category": "Technical",
+      "description": "Test your coding skills in competitive programming challenges",
+      "icon": "code"
+    },
+    {
+      "id": 3,
+      "name": "Capture The Flag (CTF)",
+      "category": "Technical",
+      "description": "Cybersecurity competition focusing on hacking and problem-solving",
+      "icon": "shield"
+    },
+    {
+      "id": 4,
+      "name": "Treasure Hunt",
+      "category": "Non-Technical",
+      "description": "Adventure-filled treasure hunt with exciting challenges",
+      "icon": "map"
+    },
+    {
+      "id": 5,
+      "name": "FIFA",
+      "category": "Gaming",
+      "description": "FIFA gaming tournament for all gaming enthusiasts",
+      "icon": "gamepad2"
+    },
+    {
+      "id": 6,
+      "name": "Ideathon",
+      "category": "Technical",
+      "descriptiwon": "Showcase your innovative ideas and turn them into reality",
+      "icon": "lightbulb"
+    },
+    {
+      "id": 7,
+      "name": "Prompt to Programming",
+      "category": "Technical",
+      "description": "Convert creative prompts into functional code",
+      "icon": "wand2"
+    },
+    {
+      "id": 8,
+      "name": "BGMI",
+      "category": "Gaming",
+      "description": "BGMI (Battlegrounds Mobile India) tournament for mobile gamers",
+      "icon": "gamepad2"
+    },
+    {
+      "id": 9,
+      "name": "Hackathon",
+      "category": "Technical",
+      "description": "24-hour innovation and development challenge",
+      "icon": "code-square"
+    },
+    {
+      "id": 10,
+      "name": "CAED",
+      "category": "Technical",
+      "description": "Computer-Aided Engineering Design competition",
+      "icon": "cpu"
+    },
+    {
+      "id": 11,
+      "name": "Circuit Mania",
+      "category": "Technical",
+      "description": "Electronics and circuit design competition",
+      "icon": "zap"
+    },
+    {
+      "id": 12,
+      "name": "Bridge Building Competition",
+      "category": "Technical",
+      "description": "Civil engineering competition to build the strongest bridge",
+      "icon": "construction"
+    },
+    {
+      "id": 13,
+      "name": "Valorant Tournament",
+      "category": "Gaming",
+      "description": "Valorant e-sports tournament for competitive gamers",
+      "icon": "gamepad2"
+    },
+    {
+      "id": 14,
+      "name": "Chess Tournament",
+      "category": "Non-Technical",
+      "description": "Classic chess competition testing strategic thinking",
+      "icon": "chess"
+    }
+  ]
+}
