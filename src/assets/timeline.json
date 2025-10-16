@@ -1,0 +1,157 @@
+{
+  "eventTimeline": {
+    "day1": {
+      "title": "Day 1: Spark of Innovation & Strategy",
+      "description": "Setting the stage, acquiring new knowledge, and diving into the first wave of intense competitions.",
+      "date": "Day 1",
+      "events": [
+        {
+          "time": "8:30 AM - 9:30 AM",
+          "title": "Registration",
+          "category": "general",
+          "description": ""
+        },
+        {
+          "time": "9:00 AM - 10:30 AM",
+          "title": "Grand Inauguration",
+          "category": "general",
+          "description": ""
+        },
+        {
+          "time": "10:30 AM - 1:00 PM",
+          "title": "Ideathon",
+          "category": "tech",
+          "description": ""
+        },
+        {
+          "time": "1:00 PM - 2:00 PM",
+          "title": "Lunch & Networking Break",
+          "category": "break",
+          "description": ""
+        },
+        {
+          "time": "2:00 PM - 3:30 PM",
+          "title": "Competitive Programming (CP)",
+          "category": "tech",
+          "description": "A classic test of logic and coding prowess against the clock."
+        },
+        {
+          "time": "2:00 PM - 5:00 PM",
+          "title": "Chess Tournament",
+          "category": "non-tech",
+          "description": "A battle of wits and strategy for the grandmasters of the 64 squares."
+        },
+        {
+          "time": "3:30 PM - 5:30 PM",
+          "title": "Capture The Flag (CTF)",
+          "category": "tech",
+          "description": "A cybersecurity challenge where teams navigate digital mazes to find hidden flags."
+        },
+        {
+          "time": "3:30 PM - 5:30 PM",
+          "title": "Treasure Hunt",
+          "category": "non-tech",
+          "description": "A fun-filled, mind-bending hunt across the campus that tests problem-solving and teamwork."
+        }
+      ]
+    },
+    "day2": {
+      "title": "Day 2: The Marathon of Creation & Skill",
+      "description": "Diverse challenges in the morning, leading up to the launch of the flagship 24-hour Hackathon.",
+      "date": "Day 2",
+      "events": [
+        {
+          "time": "9:00 AM - 1:00 PM",
+          "title": "Deep-Dive Workshop",
+          "category": "tech",
+          "description": ""
+        },
+        {
+          "time": "9:00 AM - 1:00 PM",
+          "title": "Prompt to Programming",
+          "category": "tech",
+          "description": ""
+        },
+        {
+          "time": "9:00 AM - 1:00 PM",
+          "title": "BGMI Tournament",
+          "category": "non-tech",
+          "description": ""
+        },
+        {
+          "time": "9:00 AM - 1:00 PM",
+          "title": "FIFA Tournament",
+          "category": "non-tech",
+          "description": ""
+        },
+        {
+          "time": "1:00 PM - 2:00 PM",
+          "title": "Lunch Break",
+          "category": "break",
+          "description": ""
+        },
+        {
+          "time": "2:00 PM onwards",
+          "title": "Hackathon Commences",
+          "category": "tech",
+          "description": "24-hour flagship event begins"
+        },
+        {
+          "time": "2:30 PM onwards",
+          "title": "CAED (Computer-Aided Engineering Drawing)",
+          "category": "tech",
+          "description": ""
+        },
+        {
+          "time": "2:30 PM onwards",
+          "title": "Circuit Mania",
+          "category": "tech",
+          "description": ""
+        }
+      ]
+    },
+    "day3": {
+      "title": "Day 3: The Grand Finale & Champions' Rise",
+      "description": "The final day of endurance, last-minute breakthroughs, and celebrating the champions.",
+      "date": "Day 3",
+      "events": [
+        {
+          "time": "9:00 AM - 12:00 PM",
+          "title": "Bridge Building Competition",
+          "category": "tech",
+          "description": ""
+        },
+        {
+          "time": "2:00 PM",
+          "title": "Hackathon Concludes",
+          "category": "tech",
+          "description": "End of 24-hour hackathon"
+        },
+        {
+          "time": "2:30 PM - 4:00 PM",
+          "title": "Valorant (Valo) Tournament",
+          "category": "non-tech",
+          "description": "E-Sports Finals & Showdown"
+        },
+        {
+          "time": "4:30 PM - 5:30 PM",
+          "title": "Prize Distribution & Closing Ceremony",
+          "category": "general",
+          "description": ""
+        }
+      ]
+    },
+    "ongoing": {
+      "title": "Ongoing Event (Throughout the Fest)",
+      "description": "Continuous activities running across all three days",
+      "events": [
+        {
+          "time": "Throughout the Fest",
+          "title": "Spontaneous Quiz",
+          "category": "non-tech",
+          "description": "Stay alert! A quizmaster will be roaming the campus with brain teasers and trivia. Fun prizes await those with quick wits!"
+        }
+      ]
+    }
+  }
+}

@@ -16,19 +16,19 @@
           "medium": 2,
           "hard": 2
         },
-        "platform": "[PLACEHOLDER]",
-        "languages": "[PLACEHOLDER]",
+        "platform": "HackerRank / Codeforces",
+        "languages": "C, C++, Java, Python, JavaScript",
         "equipment": "PCs / workstations by organizers",
         "submissionMethod": "Participants submit solutions through the contest platform; multiple submissions allowed"
       },
       "scoring": {
-        "system": "Each solved problem yields points",
-        "penalty": "Wrong submissions incur time penalty",
+        "system": "Each solved problem yields points (100-500 points based on difficulty)",
+        "penalty": "Wrong submissions incur 10 minute time penalty per submission",
         "tieBreaker": "In case of a tie, ranking is decided by the time of last accepted submission or cumulative time"
       },
       "rules": [
         "Registration must be completed before the deadline; team list is locked after that",
-        "Participants should report at the venue at least [PLACEHOLDER] minutes before start",
+        "Participants should report at the venue at least 30 minutes before start",
         "Personal devices such as laptops, smart watches, tablets, or mobile phones are strictly prohibited",
         "Use of external code, plagiarism, or collaboration is not allowed",
         "Tampering with the judging system or scoreboard leads to disqualification",
@@ -38,36 +38,37 @@
       ],
       "schedule": [
         {
-          "time": "T minus 15 min",
+          "time": "9:45 AM",
           "activity": "Participants check in and get settled"
         },
         {
-          "time": "T",
+          "time": "10:00 AM",
           "activity": "Contest begins"
         },
         {
-          "time": "T + 90 min",
+          "time": "11:30 AM",
           "activity": "Contest ends and submission window closes"
         },
         {
-          "time": "T + 90 to T + ?",
+          "time": "11:30 AM - 12:00 PM",
           "activity": "Clarification period / buffer time"
         },
         {
-          "time": "T + ?",
+          "time": "12:30 PM",
           "activity": "Results announced"
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹5,000",
           "rewards": ["Trophy", "Certificate"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹3,000",
           "rewards": ["Certificate"]
         },
         "third": {
+          "amount": "₹2,000",
           "rewards": ["Certificate", "Swag"]
         },
         "special": ["Fastest Submission", "Most Optimized Code", "Cleanest Code"]
@@ -79,7 +80,7 @@
         },
         {
           "question": "Which languages can I code in?",
-          "answer": "Supported languages will be listed on the contest platform."
+          "answer": "C, C++, Java, Python, and JavaScript are supported."
         },
         {
           "question": "Will there be partial scoring?",
@@ -91,10 +92,10 @@
         }
       ],
       "contact": {
-        "name": "[PLACEHOLDER]",
-        "phone": "[PLACEHOLDER]",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "name": "Rahul Kumar",
+        "phone": "9876543210",
+        "email": "cp@techfest2025.com",
+        "venue": "Computer Lab - Block A, 3rd Floor"
       }
     },
     {
@@ -132,40 +133,41 @@
       ],
       "schedule": [
         {
-          "time": "T - 30 min",
+          "time": "9:30 AM",
           "activity": "Check-in & briefing"
         },
         {
-          "time": "T",
+          "time": "10:00 AM",
           "activity": "Prompt released, coding begins"
         },
         {
-          "time": "T + mid time",
+          "time": "1:00 PM",
           "activity": "Mid-checkpoint"
         },
         {
-          "time": "T + full time",
+          "time": "4:00 PM",
           "activity": "Submission deadline"
         },
         {
-          "time": "Post-submission",
+          "time": "4:15 PM - 5:30 PM",
           "activity": "Demo / Judging"
         },
         {
-          "time": "End of event",
+          "time": "6:00 PM",
           "activity": "Winner announcements"
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹10,000",
           "rewards": ["Trophy", "Certificate"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹6,000",
           "rewards": ["Certificate"]
         },
         "third": {
+          "amount": "₹4,000",
           "rewards": ["Certificate", "Swag"]
         },
         "special": ["Most Innovative", "Best AI Usage", "Best UI", "Cleanest Architecture"]
@@ -189,10 +191,10 @@
         }
       ],
       "contact": {
-        "name": "[PLACEHOLDER]",
-        "phone": "[PLACEHOLDER]",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "name": "Priya Sharma",
+        "phone": "9845671234",
+        "email": "hackathon@techfest2025.com",
+        "venue": "Innovation Lab - Block B, 1st Floor"
       }
     },
     {
@@ -207,11 +209,11 @@
         "format": "Jeopardy-style challenge board",
         "domains": ["Web", "Crypto", "Reverse", "Forensics", "OSINT", "Misc"],
         "duration": "3 hours",
-        "platform": "[PLACEHOLDER]"
+        "platform": "CTFd Platform"
       },
       "scoring": {
-        "system": "Tasks have different points",
-        "partialCredits": "Possible",
+        "system": "Tasks have different points (50-500 based on difficulty)",
+        "partialCredits": "Possible for multi-part challenges",
         "tieBreaker": "Earlier last accepted flag wins"
       },
       "rules": [
@@ -223,36 +225,37 @@
       ],
       "schedule": [
         {
-          "time": "T - 15 min",
+          "time": "1:45 PM",
           "activity": "Login & setup"
         },
         {
-          "time": "T",
+          "time": "2:00 PM",
           "activity": "Challenge board opens"
         },
         {
-          "time": "T + 3 hrs",
+          "time": "5:00 PM",
           "activity": "Flag submission closes"
         },
         {
-          "time": "Post-close",
+          "time": "5:00 PM - 5:30 PM",
           "activity": "Judge review & disputes"
         },
         {
-          "time": "Result Time",
+          "time": "5:45 PM",
           "activity": "Winners & feedback"
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹8,000",
           "rewards": ["Trophy", "Certificate"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹5,000",
           "rewards": ["Certificate"]
         },
         "third": {
+          "amount": "₹3,000",
           "rewards": ["Certificate", "Swag"]
         },
         "special": ["Best Reverse Engineering", "Fastest Solve"]
@@ -272,10 +275,10 @@
         }
       ],
       "contact": {
-        "name": "[PLACEHOLDER]",
-        "phone": "[PLACEHOLDER]",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "name": "Arjun Patel",
+        "phone": "9823456789",
+        "email": "ctf@techfest2025.com",
+        "venue": "Security Lab - Block C, 2nd Floor"
       }
     },
     {
@@ -303,36 +306,37 @@
       ],
       "schedule": [
         {
-          "time": "T - 15 min",
+          "time": "11:45 AM",
           "activity": "Briefing & instructions"
         },
         {
-          "time": "T",
+          "time": "12:00 PM",
           "activity": "Hunt begins"
         },
         {
-          "time": "T + 2.5 hrs",
+          "time": "2:30 PM",
           "activity": "Final checkpoint"
         },
         {
-          "time": "Post-hunt",
+          "time": "2:30 PM - 3:00 PM",
           "activity": "Verification & review"
         },
         {
-          "time": "Result Time",
+          "time": "3:15 PM",
           "activity": "Results declared"
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹6,000",
           "rewards": ["Trophy", "Certificate"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹4,000",
           "rewards": ["Certificate"]
         },
         "third": {
+          "amount": "₹2,500",
           "rewards": ["Certificate", "Swag"]
         },
         "special": ["Fastest Completion", "Best Strategy"]
@@ -352,12 +356,71 @@
         }
       ],
       "contact": {
-        "name": "[PLACEHOLDER]",
-        "phone": "[PLACEHOLDER]",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "name": "Sneha Reddy",
+        "phone": "9912345678",
+        "email": "treasurehunt@techfest2025.com",
+        "venue": "Main Campus Ground"
       }
     },
+      {
+        "id": "treasure_hunt",
+        "name": "Treasure Hunt",
+        "icon": "🧭",
+        "category": "fun",
+        "about": {
+          "description": "The Treasure Hunt is an exciting multi-round team competition that challenges participants’ logical reasoning, problem-solving, and teamwork skills. Teams navigate through progressive rounds, solving clues and overcoming challenges to reach the final treasure.",
+          "highlights": [
+            "Team size: 4 members per team",
+            "Single team allowed per institution",
+            "Multi-round eliminations leading to the final stage",
+            "Focus on teamwork, logic, and observation",
+            "Attractive prizes for winners and runners-up"
+          ]
+        },
+        "timeline": [
+          { "time": "Round 1", "activity": "Initial clue-solving and elimination" },
+          { "time": "Round 2", "activity": "Intermediate challenge stage" },
+          { "time": "Final Round", "activity": "Ultimate treasure hunt and prize ceremony" }
+        ],
+        "rules": [
+          "Each team must consist of 4 members from the same institution.",
+          "Only one team per institution is allowed.",
+          "No mobile phones, internet, or external help unless explicitly permitted.",
+          "Teams must not damage property or tamper with clues belonging to others.",
+          "Teams must stay together throughout the hunt unless instructed otherwise.",
+          "Skipping clues or interfering with other teams’ progress results in disqualification.",
+          "Organizers’ and judges’ decisions are final and binding."
+        ],
+        "faqs": [
+          {
+            "question": "Can teams use mobile phones for solving clues?",
+            "answer": "No. The use of mobile phones or external assistance is strictly prohibited unless stated otherwise."
+          },
+          {
+            "question": "How many members can a team have?",
+            "answer": "Each team must have exactly 4 members from the same institution."
+          },
+          {
+            "question": "Are there eliminations in each round?",
+            "answer": "Yes. Teams will be progressively eliminated after each round."
+          },
+          {
+            "question": "What are the prizes?",
+            "answer": "Winners and runners-up will receive certificates and prizes."
+          },
+          {
+            "question": "Is safety ensured during the hunt?",
+            "answer": "Yes. Participants must act responsibly; organizers are not liable for injuries due to negligence."
+          }
+        ],
+        "contact": {
+          "name": "Event Coordinator",
+          "role": "Treasure Hunt Organizer",
+          "phone": "",
+          "email": "",
+          "venue": "Acharya Campus, Bangalore"
+        }
+      },
     {
       "id": "chess",
       "name": "Chess Tournament",
@@ -370,7 +433,7 @@
         "timeControl": "10 min per player",
         "rounds": "5-7 based on turnout",
         "equipment": "Boards, clocks provided",
-        "pairing": "[PLACEHOLDER]"
+        "pairing": "Random pairing for Round 1, then skill-based"
       },
       "rules": [
         "Touch move enforced",
@@ -382,30 +445,31 @@
       "schedule": [
         {
           "round": "Round 1",
-          "time": "10:00",
+          "time": "10:00 AM",
           "notes": "First match begins"
         },
         {
           "round": "Final",
-          "time": "12:30+",
+          "time": "12:30 PM",
           "notes": "Championship match"
         },
         {
           "round": "Awards",
-          "time": "16:30",
+          "time": "4:30 PM",
           "notes": "Prizes & closing"
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹4,000",
           "rewards": ["Trophy", "Certificate"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹2,500",
           "rewards": ["Certificate"]
         },
         "third": {
+          "amount": "₹1,500",
           "rewards": ["Certificate", "Swag"]
         },
         "special": ["Best Game", "Most Aggressive"]
@@ -423,8 +487,8 @@
       "contact": {
         "name": "Basavakiran",
         "phone": "9353945902",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "email": "chess@techfest2025.com",
+        "venue": "Indoor Sports Hall"
       }
     },
     {
@@ -451,31 +515,32 @@
       "schedule": [
         {
           "match": "Match 1",
-          "time": "14:00 - 14:25"
+          "time": "2:00 PM - 2:25 PM"
         },
         {
           "match": "Match 2",
-          "time": "15:00 - 15:25"
+          "time": "3:00 PM - 3:25 PM"
         },
         {
           "match": "Final",
-          "time": "TBD"
+          "time": "4:30 PM - 5:00 PM"
         },
         {
           "match": "Results",
-          "time": "After matches"
+          "time": "5:15 PM"
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹7,000",
           "rewards": ["Trophy", "Certificate"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹4,500",
           "rewards": ["Certificate"]
         },
         "third": {
+          "amount": "₹2,500",
           "rewards": ["Certificate", "Swag"]
         },
         "special": ["MVP", "Most Kills", "Best Strategy"]
@@ -491,10 +556,10 @@
         }
       ],
       "contact": {
-        "name": "[PLACEHOLDER]",
-        "phone": "[PLACEHOLDER]",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "name": "Vikram Singh",
+        "phone": "9834567890",
+        "email": "bgmi@techfest2025.com",
+        "venue": "Gaming Arena - Block D, Ground Floor"
       }
     },
     {
@@ -520,35 +585,36 @@
       "schedule": [
         {
           "round": "Round of 16",
-          "time": "10:00 - 12:00"
+          "time": "10:00 AM - 12:00 PM"
         },
         {
           "round": "Quarterfinals",
-          "time": "12:30 - 13:30"
+          "time": "12:30 PM - 1:30 PM"
         },
         {
           "round": "Semis",
-          "time": "14:00 - 14:30"
+          "time": "2:00 PM - 2:30 PM"
         },
         {
           "round": "Final",
-          "time": "15:00 - 15:30"
+          "time": "3:00 PM - 3:30 PM"
         },
         {
           "round": "Awards",
-          "time": "16:00 onwards"
+          "time": "4:00 PM onwards"
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹5,000",
           "rewards": ["Trophy", "Certificate"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹3,000",
           "rewards": ["Certificate"]
         },
         "third": {
+          "amount": "₹2,000",
           "rewards": ["Certificate", "Swag"]
         },
         "special": ["Highest Goals", "Best Comeback"]
@@ -560,10 +626,10 @@
         }
       ],
       "contact": {
-        "name": "[PLACEHOLDER]",
-        "phone": "[PLACEHOLDER]",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "name": "Rohan Mehta",
+        "phone": "9867543210",
+        "email": "fifa@techfest2025.com",
+        "venue": "Gaming Arena - Block D, Ground Floor"
       }
     },
     {
@@ -590,38 +656,42 @@
       "schedule": [
         {
           "stage": "Round of 16",
-          "time": "16:00 - 17:00",
+          "time": "4:00 PM - 5:00 PM",
           "format": "BO1"
         },
         {
           "stage": "Quarterfinals",
-          "time": "17:30 - 18:30",
+          "time": "5:30 PM - 6:30 PM",
           "format": "BO3"
         },
         {
           "stage": "Semis",
-          "time": "19:00 - 20:00",
+          "time": "7:00 PM - 8:00 PM",
           "format": "BO3"
         },
         {
           "stage": "Final",
-          "time": "20:30 - 21:30",
+          "time": "8:30 PM - 9:30 PM",
           "format": "BO3"
         },
         {
           "stage": "Awards",
-          "time": "22:00 onwards",
+          "time": "10:00 PM onwards",
           "format": ""
         }
       ],
       "prizes": {
         "first": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹12,000",
           "rewards": ["Trophy", "Certificates"]
         },
         "second": {
-          "amount": "[PLACEHOLDER]",
+          "amount": "₹7,000",
           "rewards": ["Certificates"]
+        },
+        "third": {
+          "amount": "₹4,000",
+          "rewards": ["Certificates", "Swag"]
         },
         "special": ["MVP", "Most Kills", "Best Clutch"]
       },
@@ -636,10 +706,70 @@
         }
       ],
       "contact": {
-        "name": "[PLACEHOLDER]",
-        "phone": "[PLACEHOLDER]",
-        "email": "[PLACEHOLDER]",
-        "venue": "[PLACEHOLDER]"
+        "name": "Aditya Gupta",
+        "phone": "9801234567",
+        "email": "valorant@techfest2025.com",
+        "venue": "E-Sports Arena - Block E, 1st Floor"
+      }
+    },
+    {
+      "id": "ideathon",
+      "name": "Ideathon",
+      "icon": "🚀",
+      "category": "technical",
+      "about": {
+        "description": "The Startup Pitch Competition challenges participants to think like entrepreneurs and present their innovative product ideas to a panel of judges. Teams will create a 10-slide investor pitch deck and deliver a 3-minute live pitch focusing on Go-to-Market strategy, Financials, Innovation, and Impact. This event provides a real-world startup experience and helps participants sharpen their pitching, planning, and presentation skills.",
+        "highlights": [
+          "Team size: 3–5 members",
+          "Create a 10-slide investor pitch deck",
+          "Deliver a 3-minute live pitch presentation",
+          "Focus on innovation, financial viability, and impact",
+          "Attractive awards for best pitch, product plan, and prototype"
+        ]
+      },
+      "timeline": [
+        { "time": "Phase 1", "activity": "Team formation and idea finalization" },
+        { "time": "Phase 2", "activity": "Preparation of the 10-slide investor pitch deck" },
+        { "time": "Phase 3", "activity": "3-minute live pitch presentation before judges" },
+        { "time": "Phase 4", "activity": "Evaluation based on Go-to-Market, Financials, Innovation, Impact, and Q&A handling" },
+        { "time": "Phase 5", "activity": "Results and awards announcement" }
+      ],
+      "rules": [
+        "Each team must consist of 3–5 members with diverse roles (technical, business, design, presentation).",
+        "All ideas must be original and should aim to solve a real-world problem.",
+        "Pitch decks should not exceed 10 slides.",
+        "The live pitch should strictly be within 3 minutes.",
+        "Any plagiarism or use of pre-existing startup ideas will lead to disqualification.",
+        "Judges' decisions are final and binding."
+      ],
+      "faqs": [
+        {
+          "question": "Can we choose any product idea?",
+          "answer": "Yes. Teams are free to select any idea that is innovative, viable, and solves a real problem."
+        },
+        {
+          "question": "Do we need a working prototype?",
+          "answer": "A working prototype is not mandatory but is encouraged to strengthen your pitch."
+        },
+        {
+          "question": "How many members can be in a team?",
+          "answer": "Teams can have a minimum of 3 and a maximum of 5 members."
+        },
+        {
+          "question": "How long should the pitch presentation be?",
+          "answer": "Each team gets exactly 3 minutes for their live pitch."
+        },
+        {
+          "question": "What are the award categories?",
+          "answer": "Best Product Plan, Best Prototype Execution, and Best Pitch Delivery."
+        }
+      ],
+      "contact": {
+        "name": "Student Coordinator",
+        "role": "Event Coordinator",
+        "phone": "6369113266",
+        "email": "",
+        "venue": ""
       }
     }
   ]

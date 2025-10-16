@@ -85,9 +85,27 @@ const EventDetail = () => {
           <section className="mb-16">
             <SectionHeader icon={Info} title="About" />
             <div className="bg-gradient-to-br from-neutral-900/50 to-neutral-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
-              <p className="text-neutral-300 leading-relaxed text-lg">
-                {event.about}
-              </p>
+              {typeof event.about === 'string' ? (
+                <p className="text-neutral-300 leading-relaxed text-lg">{event.about}</p>
+              ) : (
+                <div className="space-y-6">
+                  {event.about?.description && (
+                    <p className="text-neutral-300 leading-relaxed text-lg">
+                      {event.about.description}
+                    </p>
+                  )}
+                  {Array.isArray(event.about?.highlights) && event.about.highlights.length > 0 && (
+                    <ul className="grid md:grid-cols-2 gap-3">
+                      {event.about.highlights.map((point, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
+                          <span className="text-neutral-300">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
             </div>
           </section>
 
@@ -192,11 +210,11 @@ const EventDetail = () => {
           )}
 
           {/* Schedule Section */}
-          {event.schedule && (
+          {(event.schedule || event.timeline) && (
             <section className="mb-16">
               <SectionHeader icon={Calendar} title="Schedule" />
               <div className="space-y-4">
-                {event.schedule.map((item, index) => (
+                {(event.schedule || event.timeline).map((item, index) => (
                   <div 
                     key={index}
                     className="bg-gradient-to-r from-neutral-900/50 to-neutral-800/30 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-cyan-400/30 transition-colors"
@@ -314,11 +332,11 @@ const EventDetail = () => {
           )}
 
           {/* FAQ Section */}
-          {event.faq && (
+          {(event.faq || event.faqs) && (
             <section className="mb-16">
               <SectionHeader icon={HelpCircle} title="Frequently Asked Questions" />
               <div className="space-y-4">
-                {event.faq.map((item, index) => (
+                {(event.faq || event.faqs).map((item, index) => (
                   <div 
                     key={index}
                     className="bg-gradient-to-br from-neutral-900/50 to-neutral-800/30 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/30 transition-colors"
