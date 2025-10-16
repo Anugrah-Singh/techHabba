@@ -1,25 +1,15 @@
-
-
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Events from './pages/Events';
-import EventDetails from './pages/EventDetails';
-import Registration from './pages/Registration';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Register from './pages/Register';
+import EventDetail from './pages/EventDetail';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/events/:id" element={<EventDetails />} />
-        <Route path="/registration" element={<Registration />} />
-      </Routes>
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/events/:eventId" element={<EventDetail />} />
+    </Routes>
   );
 }
 

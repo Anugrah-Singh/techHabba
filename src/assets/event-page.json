@@ -1,0 +1,646 @@
+{
+  "festName": "Tech Fest 2025",
+  "events": [
+    {
+      "id": "competitive-programming",
+      "name": "Competitive Programming (CP)",
+      "icon": "🔢",
+      "category": "technical",
+      "about": "Competitive Programming is a time-constrained individual contest that tests a participant's ability to devise algorithms, implement them efficiently, and debug under pressure. This event is meant to challenge logical thinking, coding speed, and optimal solution design across topics like data structures, graph theory, dynamic programming, greedy algorithms, and combinatorics.",
+      "structure": {
+        "teamType": "Individual",
+        "duration": "90 minutes",
+        "problemCount": 6,
+        "problemDistribution": {
+          "easy": 2,
+          "medium": 2,
+          "hard": 2
+        },
+        "platform": "[PLACEHOLDER]",
+        "languages": "[PLACEHOLDER]",
+        "equipment": "PCs / workstations by organizers",
+        "submissionMethod": "Participants submit solutions through the contest platform; multiple submissions allowed"
+      },
+      "scoring": {
+        "system": "Each solved problem yields points",
+        "penalty": "Wrong submissions incur time penalty",
+        "tieBreaker": "In case of a tie, ranking is decided by the time of last accepted submission or cumulative time"
+      },
+      "rules": [
+        "Registration must be completed before the deadline; team list is locked after that",
+        "Participants should report at the venue at least [PLACEHOLDER] minutes before start",
+        "Personal devices such as laptops, smart watches, tablets, or mobile phones are strictly prohibited",
+        "Use of external code, plagiarism, or collaboration is not allowed",
+        "Tampering with the judging system or scoreboard leads to disqualification",
+        "Clarifications will be posted digitally; no verbal interaction with coordinators",
+        "Judges' decisions are final and binding",
+        "Organizers may pause or extend time in case of technical issues"
+      ],
+      "schedule": [
+        {
+          "time": "T minus 15 min",
+          "activity": "Participants check in and get settled"
+        },
+        {
+          "time": "T",
+          "activity": "Contest begins"
+        },
+        {
+          "time": "T + 90 min",
+          "activity": "Contest ends and submission window closes"
+        },
+        {
+          "time": "T + 90 to T + ?",
+          "activity": "Clarification period / buffer time"
+        },
+        {
+          "time": "T + ?",
+          "activity": "Results announced"
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificate"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificate"]
+        },
+        "third": {
+          "rewards": ["Certificate", "Swag"]
+        },
+        "special": ["Fastest Submission", "Most Optimized Code", "Cleanest Code"]
+      },
+      "faq": [
+        {
+          "question": "Can I use my own laptop?",
+          "answer": "No. Systems will be provided."
+        },
+        {
+          "question": "Which languages can I code in?",
+          "answer": "Supported languages will be listed on the contest platform."
+        },
+        {
+          "question": "Will there be partial scoring?",
+          "answer": "Yes, if some test batches pass."
+        },
+        {
+          "question": "Can I submit after contest ends?",
+          "answer": "No. Submission closes at exact end time."
+        }
+      ],
+      "contact": {
+        "name": "[PLACEHOLDER]",
+        "phone": "[PLACEHOLDER]",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    },
+    {
+      "id": "prompt-to-product",
+      "name": "Prompt to Product",
+      "icon": "🛠️",
+      "category": "technical",
+      "about": "Innovation and rapid development challenge where teams respond to a prompt by designing, building, and deploying a working prototype within the event timeframe. Encourages creativity, AI integration, architectural planning, and presentation.",
+      "structure": {
+        "teamType": "Team",
+        "teamSize": "2-3 members",
+        "duration": "5-6 hours",
+        "promptRelease": "At event start",
+        "allowedTools": "Open (AI tools, APIs, frameworks, etc.)"
+      },
+      "deliverables": [
+        "Live deployed prototype (web app, tool, etc.)",
+        "Documentation: architecture, modules, AI usage, team roles",
+        "Demo / presentation to judges"
+      ],
+      "evaluation": [
+        "Functional correctness & completeness",
+        "Innovation and uniqueness",
+        "UI/UX Design",
+        "Code quality & modularity",
+        "Efficiency and scalability",
+        "AI / Tool usage and rationale"
+      ],
+      "rules": [
+        "No prior coding of core logic",
+        "AI-generated content must be disclosed",
+        "No external help",
+        "Final prototype must be demonstrable",
+        "Judges' decisions are final"
+      ],
+      "schedule": [
+        {
+          "time": "T - 30 min",
+          "activity": "Check-in & briefing"
+        },
+        {
+          "time": "T",
+          "activity": "Prompt released, coding begins"
+        },
+        {
+          "time": "T + mid time",
+          "activity": "Mid-checkpoint"
+        },
+        {
+          "time": "T + full time",
+          "activity": "Submission deadline"
+        },
+        {
+          "time": "Post-submission",
+          "activity": "Demo / Judging"
+        },
+        {
+          "time": "End of event",
+          "activity": "Winner announcements"
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificate"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificate"]
+        },
+        "third": {
+          "rewards": ["Certificate", "Swag"]
+        },
+        "special": ["Most Innovative", "Best AI Usage", "Best UI", "Cleanest Architecture"]
+      },
+      "faq": [
+        {
+          "question": "Can we use prewritten modules?",
+          "answer": "Only minimal utility code; disclose if used."
+        },
+        {
+          "question": "Must we deploy online?",
+          "answer": "Yes. Screenshots not enough."
+        },
+        {
+          "question": "Can we use external APIs or services?",
+          "answer": "Yes, if integrated during event."
+        },
+        {
+          "question": "Internet failure?",
+          "answer": "Organizers may extend time if needed."
+        }
+      ],
+      "contact": {
+        "name": "[PLACEHOLDER]",
+        "phone": "[PLACEHOLDER]",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    },
+    {
+      "id": "ctf",
+      "name": "Capture The Flag (CTF)",
+      "icon": "🧠",
+      "category": "technical",
+      "about": "Cybersecurity competition where teams solve technical tasks in cryptography, web, reverse engineering, forensics, etc., to capture flags. Safe, controlled, and intellectually challenging.",
+      "structure": {
+        "teamType": "Team",
+        "teamSize": 3,
+        "format": "Jeopardy-style challenge board",
+        "domains": ["Web", "Crypto", "Reverse", "Forensics", "OSINT", "Misc"],
+        "duration": "3 hours",
+        "platform": "[PLACEHOLDER]"
+      },
+      "scoring": {
+        "system": "Tasks have different points",
+        "partialCredits": "Possible",
+        "tieBreaker": "Earlier last accepted flag wins"
+      },
+      "rules": [
+        "No external communication",
+        "Use of public tools allowed; no direct help",
+        "No flag sharing",
+        "No platform tampering",
+        "Judges' decisions are final"
+      ],
+      "schedule": [
+        {
+          "time": "T - 15 min",
+          "activity": "Login & setup"
+        },
+        {
+          "time": "T",
+          "activity": "Challenge board opens"
+        },
+        {
+          "time": "T + 3 hrs",
+          "activity": "Flag submission closes"
+        },
+        {
+          "time": "Post-close",
+          "activity": "Judge review & disputes"
+        },
+        {
+          "time": "Result Time",
+          "activity": "Winners & feedback"
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificate"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificate"]
+        },
+        "third": {
+          "rewards": ["Certificate", "Swag"]
+        },
+        "special": ["Best Reverse Engineering", "Fastest Solve"]
+      },
+      "faq": [
+        {
+          "question": "Need prior knowledge?",
+          "answer": "No. Beginner-friendly challenges included."
+        },
+        {
+          "question": "Are hints provided?",
+          "answer": "Yes, possibly with time penalty."
+        },
+        {
+          "question": "Tools like GDB or Burp allowed?",
+          "answer": "Yes."
+        }
+      ],
+      "contact": {
+        "name": "[PLACEHOLDER]",
+        "phone": "[PLACEHOLDER]",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    },
+    {
+      "id": "treasure-hunt",
+      "name": "Treasure Hunt",
+      "icon": "🗺️",
+      "category": "non-technical",
+      "about": "Clue-based, campus-wide event where teams decode puzzles, chase hints, and navigate the area to reach the final destination. Focused on teamwork, speed, and reasoning.",
+      "structure": {
+        "teamType": "Team",
+        "teamSize": 4,
+        "restriction": "Same institution",
+        "rounds": "Progressive clues / eliminations",
+        "clueTypes": ["Riddles", "QR", "Maps", "Puzzles"],
+        "duration": "2 to 2.5 hours",
+        "progression": "Solve clue → next location"
+      },
+      "rules": [
+        "No GPS / phones unless told",
+        "All team members stay together",
+        "Don't interfere with other teams",
+        "Only one team per institution",
+        "Unsafe zones are off-limits",
+        "Judges' decisions are final"
+      ],
+      "schedule": [
+        {
+          "time": "T - 15 min",
+          "activity": "Briefing & instructions"
+        },
+        {
+          "time": "T",
+          "activity": "Hunt begins"
+        },
+        {
+          "time": "T + 2.5 hrs",
+          "activity": "Final checkpoint"
+        },
+        {
+          "time": "Post-hunt",
+          "activity": "Verification & review"
+        },
+        {
+          "time": "Result Time",
+          "activity": "Results declared"
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificate"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificate"]
+        },
+        "third": {
+          "rewards": ["Certificate", "Swag"]
+        },
+        "special": ["Fastest Completion", "Best Strategy"]
+      },
+      "faq": [
+        {
+          "question": "Can we carry snacks?",
+          "answer": "Yes, if self-managed."
+        },
+        {
+          "question": "Lost a clue?",
+          "answer": "Request a hint with time penalty."
+        },
+        {
+          "question": "Walk-ins?",
+          "answer": "Not allowed. Pre-registration only."
+        }
+      ],
+      "contact": {
+        "name": "[PLACEHOLDER]",
+        "phone": "[PLACEHOLDER]",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    },
+    {
+      "id": "chess",
+      "name": "Chess Tournament",
+      "icon": "♟️",
+      "category": "non-technical",
+      "about": "A strategic, FIDE-rule chess competition using either Swiss or knockout system based on participation.",
+      "structure": {
+        "teamType": "Individual",
+        "format": "Swiss or Knockout",
+        "timeControl": "10 min per player",
+        "rounds": "5-7 based on turnout",
+        "equipment": "Boards, clocks provided",
+        "pairing": "[PLACEHOLDER]"
+      },
+      "rules": [
+        "Touch move enforced",
+        "Two illegal moves = loss",
+        "5 min late = forfeit",
+        "No devices allowed",
+        "Arbiter decisions final"
+      ],
+      "schedule": [
+        {
+          "round": "Round 1",
+          "time": "10:00",
+          "notes": "First match begins"
+        },
+        {
+          "round": "Final",
+          "time": "12:30+",
+          "notes": "Championship match"
+        },
+        {
+          "round": "Awards",
+          "time": "16:30",
+          "notes": "Prizes & closing"
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificate"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificate"]
+        },
+        "third": {
+          "rewards": ["Certificate", "Swag"]
+        },
+        "special": ["Best Game", "Most Aggressive"]
+      },
+      "faq": [
+        {
+          "question": "Own clock?",
+          "answer": "No. Use official equipment."
+        },
+        {
+          "question": "Draws allowed?",
+          "answer": "Yes, per FIDE or tie-break rules."
+        }
+      ],
+      "contact": {
+        "name": "Basavakiran",
+        "phone": "9353945902",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    },
+    {
+      "id": "bgmi",
+      "name": "BGMI Tournament",
+      "icon": "🎮",
+      "category": "gaming",
+      "about": "Mobile e-sports tournament on Erangel map. Team battle royale format with tactical, reflexive gameplay.",
+      "structure": {
+        "teamType": "Team",
+        "teamSize": 4,
+        "minimumPresent": 3,
+        "platform": "Mobile",
+        "entryFee": "₹200/team",
+        "matchCount": "Multiple rounds",
+        "settings": "Standard competitive"
+      },
+      "rules": [
+        "No emulators or hacks",
+        "External help banned",
+        "Technical issues = player's responsibility",
+        "Disputes must be raised immediately"
+      ],
+      "schedule": [
+        {
+          "match": "Match 1",
+          "time": "14:00 - 14:25"
+        },
+        {
+          "match": "Match 2",
+          "time": "15:00 - 15:25"
+        },
+        {
+          "match": "Final",
+          "time": "TBD"
+        },
+        {
+          "match": "Results",
+          "time": "After matches"
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificate"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificate"]
+        },
+        "third": {
+          "rewards": ["Certificate", "Swag"]
+        },
+        "special": ["MVP", "Most Kills", "Best Strategy"]
+      },
+      "faq": [
+        {
+          "question": "All remote?",
+          "answer": "No. 3 must be onsite."
+        },
+        {
+          "question": "Disconnect mid match?",
+          "answer": "Match continues."
+        }
+      ],
+      "contact": {
+        "name": "[PLACEHOLDER]",
+        "phone": "[PLACEHOLDER]",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    },
+    {
+      "id": "fifa",
+      "name": "FIFA Tournament (EA FC 24)",
+      "icon": "⚽",
+      "category": "gaming",
+      "about": "1v1 knockout digital football competition using standard club teams.",
+      "structure": {
+        "teamType": "Individual",
+        "format": "Single elimination",
+        "platform": "PC or Console",
+        "entryFee": "₹150/player",
+        "mode": "Kick Off (no FUT)",
+        "attendance": "Mandatory onsite"
+      },
+      "rules": [
+        "No FUT or custom teams",
+        "Own controllers allowed",
+        "Settings are fixed",
+        "Disconnects handled by referees"
+      ],
+      "schedule": [
+        {
+          "round": "Round of 16",
+          "time": "10:00 - 12:00"
+        },
+        {
+          "round": "Quarterfinals",
+          "time": "12:30 - 13:30"
+        },
+        {
+          "round": "Semis",
+          "time": "14:00 - 14:30"
+        },
+        {
+          "round": "Final",
+          "time": "15:00 - 15:30"
+        },
+        {
+          "round": "Awards",
+          "time": "16:00 onwards"
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificate"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificate"]
+        },
+        "third": {
+          "rewards": ["Certificate", "Swag"]
+        },
+        "special": ["Highest Goals", "Best Comeback"]
+      },
+      "faq": [
+        {
+          "question": "Custom tactics allowed?",
+          "answer": "No. Fixed settings only."
+        }
+      ],
+      "contact": {
+        "name": "[PLACEHOLDER]",
+        "phone": "[PLACEHOLDER]",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    },
+    {
+      "id": "valorant",
+      "name": "Valorant Tournament",
+      "icon": "🔫",
+      "category": "gaming",
+      "about": "5v5 tactical shooter tournament using standard competitive format and maps.",
+      "structure": {
+        "teamType": "Team",
+        "teamSize": 5,
+        "minimumPresent": 3,
+        "entryFee": "₹250/team",
+        "matchFormat": "Bracket / Best-of rounds",
+        "platform": "Teams bring own PCs"
+      },
+      "rules": [
+        "Cheats, hacks, macros banned",
+        "No delays beyond grace period",
+        "No coaching or interference",
+        "Disconnects = continue unless severe",
+        "Admin decisions are final"
+      ],
+      "schedule": [
+        {
+          "stage": "Round of 16",
+          "time": "16:00 - 17:00",
+          "format": "BO1"
+        },
+        {
+          "stage": "Quarterfinals",
+          "time": "17:30 - 18:30",
+          "format": "BO3"
+        },
+        {
+          "stage": "Semis",
+          "time": "19:00 - 20:00",
+          "format": "BO3"
+        },
+        {
+          "stage": "Final",
+          "time": "20:30 - 21:30",
+          "format": "BO3"
+        },
+        {
+          "stage": "Awards",
+          "time": "22:00 onwards",
+          "format": ""
+        }
+      ],
+      "prizes": {
+        "first": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Trophy", "Certificates"]
+        },
+        "second": {
+          "amount": "[PLACEHOLDER]",
+          "rewards": ["Certificates"]
+        },
+        "special": ["MVP", "Most Kills", "Best Clutch"]
+      },
+      "faq": [
+        {
+          "question": "Can all 5 play remotely?",
+          "answer": "No. At least 3 must be present."
+        },
+        {
+          "question": "Streaming allowed?",
+          "answer": "Only after match and with permission."
+        }
+      ],
+      "contact": {
+        "name": "[PLACEHOLDER]",
+        "phone": "[PLACEHOLDER]",
+        "email": "[PLACEHOLDER]",
+        "venue": "[PLACEHOLDER]"
+      }
+    }
+  ]
+}

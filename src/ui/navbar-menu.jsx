@@ -62,7 +62,7 @@ export const Menu = ({ children, onMouseLeave }) => {
     <nav
       data-nav-root
       onMouseLeave={onMouseLeave}
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
+      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center items-center space-x-6 lg:space-x-8 px-8 py-5"
     >
       {children}
     </nav>

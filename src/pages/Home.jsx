@@ -1,33 +1,29 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import { FloatingNav } from '../components/FloatingNav';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Events from '../components/Events';
 import AboutAcharyaSection from '../components/AboutAcharyaSection';
 import TimelineComponent from '../components/TimelineComponent';
 import NewCTA from '../components/NewCTA';
 import Footer from '../components/Footer';
-// import { BackgroundLines } from '../ui/background-lines';
-import { Prize } from '@/components/Prize';
+import { BackgroundLines } from '../ui/background-lines';
 
 function Home() {
   return (
-    <div className="min-h-screen bg-black">
-      {/* Acharya white logo in top left */}
-      <img
-        src="/Acharya white logo.png"
-        alt="Acharya White Logo"
-        style={{ position: 'absolute', top: 20, left: 20, width: 60, height: 'auto', zIndex: 50 }}
-      />
-      {/* <BackgroundLines className="absolute inset-0" /> */}
-      <div className="relative z-10">
-        <main className="pt-24 md:pt-32">
+    <div className="min-h-screen bg-black w-full overflow-x-hidden">
+      <BackgroundLines className="absolute inset-0" />
+      <div className="relative z-10 w-full overflow-x-hidden">
+        <FloatingNav />
+        <main className="pt-8 w-full overflow-x-hidden pb-24">
           <Hero />
           <About />
-          <Prize children = {"Prize Pool 1 Lakh"}/>
-          <TimelineComponent />
+          <Events />
           <AboutAcharyaSection />
+          <TimelineComponent />
           <NewCTA />
         </main>
+        <Footer />
       </div>
     </div>
   );

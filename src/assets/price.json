@@ -1,0 +1,21 @@
+{
+  "technicalEvents": {
+    "Workshop": 200,
+    "Competitive Programming (CP)": 150,
+    "Capture The Flag (CTF)": 150,
+    "Ideathon": 300,
+    "Prompt to Programming": 100,
+    "CAED": 200,
+    "Circuit Mania": 150,
+    "Bridge Building Competition": 250
+  },
+  "gamingEvents": {
+    "FIFA": 100,
+    "BGMI": 200,
+    "Valorant Tournament": 200
+  },
+  "nonTechnicalEvents": {
+    "Treasure Hunt": 100,
+    "Chess Tournament": 50
+  }
+}
