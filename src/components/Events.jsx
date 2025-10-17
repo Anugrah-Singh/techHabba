@@ -57,17 +57,22 @@ const categoryColors = {
   }
 };
 
-// Mapping between events.json names and event-page.json IDs
-const eventNameToIdMap = {
-  "Competitive Programming (CP)": "competitive-programming",
-  "Prompt to Programming": "prompt-to-product",
-  "Capture The Flag (CTF)": "ctf",
-  "Treasure Hunt": "treasure-hunt",
-  "Chess Tournament": "chess",
-  "BGMI": "bgmi",
-  "FIFA": "fifa",
-  "Valorant Tournament": "valorant",
-  "Ideathon": "ideathon"
+// Mapping between events.json names and event-page.json names
+const eventNameMapping = {
+  "Workshop": "Technical Workshop",
+  "Competitive Programming (CP)": "Competitive Programming",
+  "Prompt to Programming": "Prompt to Product",
+  "Capture The Flag (CTF)": "Capture The Flag (CTF)",
+  "Treasure Hunt": "TREASURE HUNT",
+  "Chess Tournament": "Chess Tournament",
+  "BGMI": "PUBG MOBILE (Battle Royale)",
+  "FIFA": "FIFA (EA FC 24 or Latest Version)",
+  "Valorant Tournament": "VALORANT",
+  "Ideathon": "Ideathon",
+  "24-Hour Hackathon": "24-Hour Hackathon",
+  "CAED": "CAED – Computer-Aided Engineering Drawing",
+  "Circuit Mania": "Circuit Mania",
+  "Bridge Building": "Bridge Building"
 };
 
 export default function Events() {
@@ -76,13 +81,23 @@ export default function Events() {
 
   // Get event data from event-page.json
   const getEventData = (eventName) => {
-    // First try direct mapping
-    const eventId = eventNameToIdMap[eventName];
-    if (eventId) {
-      return eventPageData.events.find(e => e.id === eventId);
-    }
-    // Then try to find by name match in event-page.json
-    return eventPageData.events.find(e => e.name === eventName);
+    // Try to find mapping
+    const mappedName = eventNameMapping[eventName] || eventName;
+    
+    // Search in all categories
+    const allEvents = [
+      ...(eventPageData.events.technical || []),
+      ...(eventPageData.events.gaming || []),
+      ...(eventPageData.events.nonTechnical || [])
+    ];
+    
+    // Find by name match
+    return allEvents.find(e => 
+      e.name === mappedName || 
+      e.name.toLowerCase() === mappedName.toLowerCase() ||
+      e.name.toLowerCase().includes(eventName.toLowerCase()) ||
+      eventName.toLowerCase().includes(e.name.toLowerCase())
+    );
   };
 
   const handleEventClick = (event) => {

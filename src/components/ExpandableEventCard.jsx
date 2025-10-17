@@ -233,13 +233,73 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
                   )}
 
                   {/* Rules */}
-                  {eventData.rules && eventData.rules.length > 0 && (
+                  {(eventData.rules && eventData.rules.length > 0) && (
                     <Section icon={CheckCircle} title="Rules & Guidelines">
                       <ul className="space-y-2">
                         {eventData.rules.map((rule, idx) => (
                           <li key={idx} className="flex items-start gap-3">
                             <span className="text-cyan-400 font-bold flex-shrink-0 mt-0.5">{idx + 1}.</span>
                             <span className="text-neutral-300">{rule}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </Section>
+                  )}
+
+                  {/* Rules and Guidelines (alternative field) */}
+                  {(eventData.rulesAndGuidelines && eventData.rulesAndGuidelines.length > 0) && (
+                    <Section icon={CheckCircle} title="Rules & Guidelines">
+                      <ul className="space-y-2">
+                        {eventData.rulesAndGuidelines.map((rule, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="text-cyan-400 font-bold flex-shrink-0 mt-0.5">{idx + 1}.</span>
+                            <span className="text-neutral-300">{rule}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </Section>
+                  )}
+
+                  {/* Basic Rules (for Chess tournament) */}
+                  {(eventData.basicRules && eventData.basicRules.length > 0) && (
+                    <Section icon={CheckCircle} title="Basic Rules">
+                      <ul className="space-y-2">
+                        {eventData.basicRules.map((rule, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="text-cyan-400 font-bold flex-shrink-0 mt-0.5">{idx + 1}.</span>
+                            <span className="text-neutral-300">{rule}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </Section>
+                  )}
+
+                  {/* Tournament Format (for Chess) */}
+                  {eventData.tournamentFormat && (
+                    <Section icon={Target} title="Tournament Format">
+                      <p className="text-neutral-300 leading-relaxed">
+                        {eventData.tournamentFormat}
+                      </p>
+                    </Section>
+                  )}
+
+                  {/* Time Control (for Chess) */}
+                  {eventData.timeControl && (
+                    <Section icon={Clock} title="Time Control">
+                      <p className="text-neutral-300 leading-relaxed">
+                        {eventData.timeControl}
+                      </p>
+                    </Section>
+                  )}
+
+                  {/* Pitch Deck Slides (for Ideathon) */}
+                  {eventData.pitchDeckSlides && eventData.pitchDeckSlides.length > 0 && (
+                    <Section icon={Target} title="Pitch Deck Structure">
+                      <ul className="space-y-2">
+                        {eventData.pitchDeckSlides.map((slide, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="text-cyan-400 font-bold flex-shrink-0 mt-0.5">{idx + 1}.</span>
+                            <span className="text-neutral-300">{slide}</span>
                           </li>
                         ))}
                       </ul>
@@ -264,31 +324,72 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
                   )}
 
                   {/* Contact */}
-                  {eventData.contact && (
-                    <Section icon={MapPin} title="Contact & Venue">
-                      <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-400/30 p-6 rounded-xl space-y-3">
-                        {eventData.contact.name && (
-                          <div className="flex items-center gap-3 text-white">
-                            <Users className="w-5 h-5 text-cyan-400" />
-                            <span className="font-semibold">{eventData.contact.name}</span>
+                  {(eventData.contact || eventData.coordinator || eventData.coordinators) && (
+                    <Section icon={MapPin} title="Contact Information">
+                      <div className="space-y-4">
+                        {/* Multiple Coordinators */}
+                        {eventData.coordinators && eventData.coordinators.length > 0 && (
+                          <div className="grid md:grid-cols-2 gap-4">
+                            {eventData.coordinators.map((coord, idx) => (
+                              <div key={idx} className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-400/30 p-4 rounded-xl space-y-2">
+                                <div className="flex items-center gap-3 text-white">
+                                  <Users className="w-5 h-5 text-cyan-400" />
+                                  <span className="font-semibold">{coord.name}</span>
+                                </div>
+                                {coord.phone && (
+                                  <div className="flex items-center gap-3 text-neutral-300">
+                                    <Phone className="w-5 h-5 text-cyan-400" />
+                                    <span>{coord.phone}</span>
+                                  </div>
+                                )}
+                              </div>
+                            ))}
                           </div>
                         )}
-                        {eventData.contact.phone && (
-                          <div className="flex items-center gap-3 text-neutral-300">
-                            <Phone className="w-5 h-5 text-cyan-400" />
-                            <span>{eventData.contact.phone}</span>
+
+                        {/* Single Coordinator */}
+                        {eventData.coordinator && !eventData.coordinators && (
+                          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-400/30 p-6 rounded-xl space-y-3">
+                            <div className="flex items-center gap-3 text-white">
+                              <Users className="w-5 h-5 text-cyan-400" />
+                              <span className="font-semibold">{eventData.coordinator.name}</span>
+                            </div>
+                            {eventData.coordinator.phone && (
+                              <div className="flex items-center gap-3 text-neutral-300">
+                                <Phone className="w-5 h-5 text-cyan-400" />
+                                <span>{eventData.coordinator.phone}</span>
+                              </div>
+                            )}
                           </div>
                         )}
-                        {eventData.contact.email && (
-                          <div className="flex items-center gap-3 text-neutral-300">
-                            <Mail className="w-5 h-5 text-cyan-400" />
-                            <span>{eventData.contact.email}</span>
-                          </div>
-                        )}
-                        {eventData.contact.venue && (
-                          <div className="flex items-center gap-3 text-neutral-300">
-                            <MapPin className="w-5 h-5 text-cyan-400" />
-                            <span>{eventData.contact.venue}</span>
+
+                        {/* Legacy Contact Format */}
+                        {eventData.contact && (
+                          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-400/30 p-6 rounded-xl space-y-3">
+                            {eventData.contact.name && (
+                              <div className="flex items-center gap-3 text-white">
+                                <Users className="w-5 h-5 text-cyan-400" />
+                                <span className="font-semibold">{eventData.contact.name}</span>
+                              </div>
+                            )}
+                            {eventData.contact.phone && (
+                              <div className="flex items-center gap-3 text-neutral-300">
+                                <Phone className="w-5 h-5 text-cyan-400" />
+                                <span>{eventData.contact.phone}</span>
+                              </div>
+                            )}
+                            {eventData.contact.email && (
+                              <div className="flex items-center gap-3 text-neutral-300">
+                                <Mail className="w-5 h-5 text-cyan-400" />
+                                <span>{eventData.contact.email}</span>
+                              </div>
+                            )}
+                            {eventData.contact.venue && (
+                              <div className="flex items-center gap-3 text-neutral-300">
+                                <MapPin className="w-5 h-5 text-cyan-400" />
+                                <span>{eventData.contact.venue}</span>
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
