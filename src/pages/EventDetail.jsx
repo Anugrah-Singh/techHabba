@@ -22,8 +22,18 @@ const EventDetail = () => {
   const { eventId } = useParams();
   const navigate = useNavigate();
   
-  // Find the event in the data
-  const event = eventPageData.events.find(e => e.id === eventId);
+  // Find the event in the data - search across all categories
+  const allEvents = [
+    ...(eventPageData.events.technical || []),
+    ...(eventPageData.events.gaming || []),
+    ...(eventPageData.events.nonTechnical || [])
+  ];
+  
+  const event = allEvents.find(e => 
+    e.id === parseInt(eventId) || 
+    e.id === eventId ||
+    e.name.toLowerCase().replace(/\s+/g, '-') === eventId
+  );
 
   if (!event) {
     return (
@@ -191,17 +201,75 @@ const EventDetail = () => {
           )}
 
           {/* Rules Section */}
-          {event.rules && (
+          {(event.rules || event.rulesAndGuidelines) && (
             <section className="mb-16">
               <SectionHeader icon={Info} title="Rules & Guidelines" />
               <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 md:p-8">
                 <ul className="space-y-4">
-                  {event.rules.map((rule, index) => (
+                  {(event.rules || event.rulesAndGuidelines).map((rule, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-red-500/20 border border-red-500/40 flex items-center justify-center text-red-400 text-sm font-bold flex-shrink-0 mt-0.5">
                         {index + 1}
                       </div>
                       <span className="text-neutral-300">{rule}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          )}
+
+          {/* Basic Rules (for Chess) */}
+          {event.basicRules && (
+            <section className="mb-16">
+              <SectionHeader icon={CheckCircle} title="Basic Rules" />
+              <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 md:p-8">
+                <ul className="space-y-4">
+                  {event.basicRules.map((rule, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-red-500/20 border border-red-500/40 flex items-center justify-center text-red-400 text-sm font-bold flex-shrink-0 mt-0.5">
+                        {index + 1}
+                      </div>
+                      <span className="text-neutral-300">{rule}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          )}
+
+          {/* Tournament Format (for Chess) */}
+          {event.tournamentFormat && (
+            <section className="mb-16">
+              <SectionHeader icon={Target} title="Tournament Format" />
+              <div className="bg-gradient-to-br from-neutral-900/50 to-neutral-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
+                <p className="text-neutral-300 leading-relaxed text-lg">{event.tournamentFormat}</p>
+              </div>
+            </section>
+          )}
+
+          {/* Time Control (for Chess) */}
+          {event.timeControl && (
+            <section className="mb-16">
+              <SectionHeader icon={Clock} title="Time Control" />
+              <div className="bg-gradient-to-br from-neutral-900/50 to-neutral-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
+                <p className="text-neutral-300 leading-relaxed text-lg">{event.timeControl}</p>
+              </div>
+            </section>
+          )}
+
+          {/* Pitch Deck Slides (for Ideathon) */}
+          {event.pitchDeckSlides && (
+            <section className="mb-16">
+              <SectionHeader icon={Target} title="Pitch Deck Structure" />
+              <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 md:p-8">
+                <ul className="space-y-4">
+                  {event.pitchDeckSlides.map((slide, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 text-sm font-bold flex-shrink-0 mt-0.5">
+                        {index + 1}
+                      </div>
+                      <span className="text-neutral-300">{slide}</span>
                     </li>
                   ))}
                 </ul>
@@ -353,53 +421,113 @@ const EventDetail = () => {
           )}
 
           {/* Contact Section */}
-          {event.contact && (
+          {(event.contact || event.coordinator || event.coordinators) && (
             <section className="mb-16">
               <SectionHeader icon={Phone} title="Contact Information" />
-              <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-500/40 rounded-2xl p-6 md:p-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  {event.contact.name && event.contact.name !== "[PLACEHOLDER]" && (
+              
+              {/* Multiple Coordinators */}
+              {event.coordinators && event.coordinators.length > 0 && (
+                <div className="grid md:grid-cols-2 gap-4">
+                  {event.coordinators.map((coord, idx) => (
+                    <div key={idx} className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-500/40 rounded-2xl p-6">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          <Users className="w-5 h-5 text-blue-400" />
+                          <div>
+                            <p className="text-sm text-neutral-400">Coordinator</p>
+                            <p className="text-white font-medium">{coord.name}</p>
+                          </div>
+                        </div>
+                        {coord.phone && (
+                          <div className="flex items-center gap-3">
+                            <Phone className="w-5 h-5 text-blue-400" />
+                            <div>
+                              <p className="text-sm text-neutral-400">Phone</p>
+                              <a href={`tel:${coord.phone}`} className="text-white font-medium hover:text-blue-400 transition-colors">
+                                {coord.phone}
+                              </a>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Single Coordinator */}
+              {event.coordinator && !event.coordinators && (
+                <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-500/40 rounded-2xl p-6 md:p-8">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div className="flex items-center gap-3">
                       <Users className="w-5 h-5 text-blue-400" />
                       <div>
                         <p className="text-sm text-neutral-400">Coordinator</p>
-                        <p className="text-white font-medium">{event.contact.name}</p>
+                        <p className="text-white font-medium">{event.coordinator.name}</p>
                       </div>
                     </div>
-                  )}
-                  {event.contact.phone && event.contact.phone !== "[PLACEHOLDER]" && (
-                    <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5 text-blue-400" />
-                      <div>
-                        <p className="text-sm text-neutral-400">Phone</p>
-                        <a href={`tel:${event.contact.phone}`} className="text-white font-medium hover:text-blue-400 transition-colors">
-                          {event.contact.phone}
-                        </a>
+                    {event.coordinator.phone && (
+                      <div className="flex items-center gap-3">
+                        <Phone className="w-5 h-5 text-blue-400" />
+                        <div>
+                          <p className="text-sm text-neutral-400">Phone</p>
+                          <a href={`tel:${event.coordinator.phone}`} className="text-white font-medium hover:text-blue-400 transition-colors">
+                            {event.coordinator.phone}
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  {event.contact.email && event.contact.email !== "[PLACEHOLDER]" && (
-                    <div className="flex items-center gap-3">
-                      <Mail className="w-5 h-5 text-blue-400" />
-                      <div>
-                        <p className="text-sm text-neutral-400">Email</p>
-                        <a href={`mailto:${event.contact.email}`} className="text-white font-medium hover:text-blue-400 transition-colors">
-                          {event.contact.email}
-                        </a>
-                      </div>
-                    </div>
-                  )}
-                  {event.contact.venue && event.contact.venue !== "[PLACEHOLDER]" && (
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-5 h-5 text-blue-400" />
-                      <div>
-                        <p className="text-sm text-neutral-400">Venue</p>
-                        <p className="text-white font-medium">{event.contact.venue}</p>
-                      </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
+
+              {/* Legacy Contact Format */}
+              {event.contact && !event.coordinator && !event.coordinators && (
+                <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-500/40 rounded-2xl p-6 md:p-8">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {event.contact.name && event.contact.name !== "[PLACEHOLDER]" && (
+                      <div className="flex items-center gap-3">
+                        <Users className="w-5 h-5 text-blue-400" />
+                        <div>
+                          <p className="text-sm text-neutral-400">Coordinator</p>
+                          <p className="text-white font-medium">{event.contact.name}</p>
+                        </div>
+                      </div>
+                    )}
+                    {event.contact.phone && event.contact.phone !== "[PLACEHOLDER]" && (
+                      <div className="flex items-center gap-3">
+                        <Phone className="w-5 h-5 text-blue-400" />
+                        <div>
+                          <p className="text-sm text-neutral-400">Phone</p>
+                          <a href={`tel:${event.contact.phone}`} className="text-white font-medium hover:text-blue-400 transition-colors">
+                            {event.contact.phone}
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                    {event.contact.email && event.contact.email !== "[PLACEHOLDER]" && (
+                      <div className="flex items-center gap-3">
+                        <Mail className="w-5 h-5 text-blue-400" />
+                        <div>
+                          <p className="text-sm text-neutral-400">Email</p>
+                          <a href={`mailto:${event.contact.email}`} className="text-white font-medium hover:text-blue-400 transition-colors">
+                            {event.contact.email}
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                    {event.contact.venue && event.contact.venue !== "[PLACEHOLDER]" && (
+                      <div className="flex items-center gap-3">
+                        <MapPin className="w-5 h-5 text-blue-400" />
+                        <div>
+                          <p className="text-sm text-neutral-400">Venue</p>
+                          <p className="text-white font-medium">{event.contact.venue}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </section>
           )}
 

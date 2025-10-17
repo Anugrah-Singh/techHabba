@@ -1,776 +1,252 @@
 {
-  "festName": "Tech Fest 2025",
-  "events": [
-    {
-      "id": "competitive-programming",
-      "name": "Competitive Programming (CP)",
-      "icon": "🔢",
-      "category": "technical",
-      "about": "Competitive Programming is a time-constrained individual contest that tests a participant's ability to devise algorithms, implement them efficiently, and debug under pressure. This event is meant to challenge logical thinking, coding speed, and optimal solution design across topics like data structures, graph theory, dynamic programming, greedy algorithms, and combinatorics.",
-      "structure": {
-        "teamType": "Individual",
-        "duration": "90 minutes",
-        "problemCount": 6,
-        "problemDistribution": {
-          "easy": 2,
-          "medium": 2,
-          "hard": 2
-        },
-        "platform": "HackerRank / Codeforces",
-        "languages": "C, C++, Java, Python, JavaScript",
-        "equipment": "PCs / workstations by organizers",
-        "submissionMethod": "Participants submit solutions through the contest platform; multiple submissions allowed"
-      },
-      "scoring": {
-        "system": "Each solved problem yields points (100-500 points based on difficulty)",
-        "penalty": "Wrong submissions incur 10 minute time penalty per submission",
-        "tieBreaker": "In case of a tie, ranking is decided by the time of last accepted submission or cumulative time"
-      },
-      "rules": [
-        "Registration must be completed before the deadline; team list is locked after that",
-        "Participants should report at the venue at least 30 minutes before start",
-        "Personal devices such as laptops, smart watches, tablets, or mobile phones are strictly prohibited",
-        "Use of external code, plagiarism, or collaboration is not allowed",
-        "Tampering with the judging system or scoreboard leads to disqualification",
-        "Clarifications will be posted digitally; no verbal interaction with coordinators",
-        "Judges' decisions are final and binding",
-        "Organizers may pause or extend time in case of technical issues"
-      ],
-      "schedule": [
-        {
-          "time": "9:45 AM",
-          "activity": "Participants check in and get settled"
-        },
-        {
-          "time": "10:00 AM",
-          "activity": "Contest begins"
-        },
-        {
-          "time": "11:30 AM",
-          "activity": "Contest ends and submission window closes"
-        },
-        {
-          "time": "11:30 AM - 12:00 PM",
-          "activity": "Clarification period / buffer time"
-        },
-        {
-          "time": "12:30 PM",
-          "activity": "Results announced"
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹5,000",
-          "rewards": ["Trophy", "Certificate"]
-        },
-        "second": {
-          "amount": "₹3,000",
-          "rewards": ["Certificate"]
-        },
-        "third": {
-          "amount": "₹2,000",
-          "rewards": ["Certificate", "Swag"]
-        },
-        "special": ["Fastest Submission", "Most Optimized Code", "Cleanest Code"]
-      },
-      "faq": [
-        {
-          "question": "Can I use my own laptop?",
-          "answer": "No. Systems will be provided."
-        },
-        {
-          "question": "Which languages can I code in?",
-          "answer": "C, C++, Java, Python, and JavaScript are supported."
-        },
-        {
-          "question": "Will there be partial scoring?",
-          "answer": "Yes, if some test batches pass."
-        },
-        {
-          "question": "Can I submit after contest ends?",
-          "answer": "No. Submission closes at exact end time."
-        }
-      ],
-      "contact": {
-        "name": "Rahul Kumar",
-        "phone": "9876543210",
-        "email": "cp@techfest2025.com",
-        "venue": "Computer Lab - Block A, 3rd Floor"
-      }
-    },
-    {
-      "id": "prompt-to-product",
-      "name": "Prompt to Product",
-      "icon": "🛠️",
-      "category": "technical",
-      "about": "Innovation and rapid development challenge where teams respond to a prompt by designing, building, and deploying a working prototype within the event timeframe. Encourages creativity, AI integration, architectural planning, and presentation.",
-      "structure": {
-        "teamType": "Team",
-        "teamSize": "2-3 members",
-        "duration": "5-6 hours",
-        "promptRelease": "At event start",
-        "allowedTools": "Open (AI tools, APIs, frameworks, etc.)"
-      },
-      "deliverables": [
-        "Live deployed prototype (web app, tool, etc.)",
-        "Documentation: architecture, modules, AI usage, team roles",
-        "Demo / presentation to judges"
-      ],
-      "evaluation": [
-        "Functional correctness & completeness",
-        "Innovation and uniqueness",
-        "UI/UX Design",
-        "Code quality & modularity",
-        "Efficiency and scalability",
-        "AI / Tool usage and rationale"
-      ],
-      "rules": [
-        "No prior coding of core logic",
-        "AI-generated content must be disclosed",
-        "No external help",
-        "Final prototype must be demonstrable",
-        "Judges' decisions are final"
-      ],
-      "schedule": [
-        {
-          "time": "9:30 AM",
-          "activity": "Check-in & briefing"
-        },
-        {
-          "time": "10:00 AM",
-          "activity": "Prompt released, coding begins"
-        },
-        {
-          "time": "1:00 PM",
-          "activity": "Mid-checkpoint"
-        },
-        {
-          "time": "4:00 PM",
-          "activity": "Submission deadline"
-        },
-        {
-          "time": "4:15 PM - 5:30 PM",
-          "activity": "Demo / Judging"
-        },
-        {
-          "time": "6:00 PM",
-          "activity": "Winner announcements"
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹10,000",
-          "rewards": ["Trophy", "Certificate"]
-        },
-        "second": {
-          "amount": "₹6,000",
-          "rewards": ["Certificate"]
-        },
-        "third": {
-          "amount": "₹4,000",
-          "rewards": ["Certificate", "Swag"]
-        },
-        "special": ["Most Innovative", "Best AI Usage", "Best UI", "Cleanest Architecture"]
-      },
-      "faq": [
-        {
-          "question": "Can we use prewritten modules?",
-          "answer": "Only minimal utility code; disclose if used."
-        },
-        {
-          "question": "Must we deploy online?",
-          "answer": "Yes. Screenshots not enough."
-        },
-        {
-          "question": "Can we use external APIs or services?",
-          "answer": "Yes, if integrated during event."
-        },
-        {
-          "question": "Internet failure?",
-          "answer": "Organizers may extend time if needed."
-        }
-      ],
-      "contact": {
-        "name": "Priya Sharma",
-        "phone": "9845671234",
-        "email": "hackathon@techfest2025.com",
-        "venue": "Innovation Lab - Block B, 1st Floor"
-      }
-    },
-    {
-      "id": "ctf",
-      "name": "Capture The Flag (CTF)",
-      "icon": "🧠",
-      "category": "technical",
-      "about": "Cybersecurity competition where teams solve technical tasks in cryptography, web, reverse engineering, forensics, etc., to capture flags. Safe, controlled, and intellectually challenging.",
-      "structure": {
-        "teamType": "Team",
-        "teamSize": 3,
-        "format": "Jeopardy-style challenge board",
-        "domains": ["Web", "Crypto", "Reverse", "Forensics", "OSINT", "Misc"],
-        "duration": "3 hours",
-        "platform": "CTFd Platform"
-      },
-      "scoring": {
-        "system": "Tasks have different points (50-500 based on difficulty)",
-        "partialCredits": "Possible for multi-part challenges",
-        "tieBreaker": "Earlier last accepted flag wins"
-      },
-      "rules": [
-        "No external communication",
-        "Use of public tools allowed; no direct help",
-        "No flag sharing",
-        "No platform tampering",
-        "Judges' decisions are final"
-      ],
-      "schedule": [
-        {
-          "time": "1:45 PM",
-          "activity": "Login & setup"
-        },
-        {
-          "time": "2:00 PM",
-          "activity": "Challenge board opens"
-        },
-        {
-          "time": "5:00 PM",
-          "activity": "Flag submission closes"
-        },
-        {
-          "time": "5:00 PM - 5:30 PM",
-          "activity": "Judge review & disputes"
-        },
-        {
-          "time": "5:45 PM",
-          "activity": "Winners & feedback"
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹8,000",
-          "rewards": ["Trophy", "Certificate"]
-        },
-        "second": {
-          "amount": "₹5,000",
-          "rewards": ["Certificate"]
-        },
-        "third": {
-          "amount": "₹3,000",
-          "rewards": ["Certificate", "Swag"]
-        },
-        "special": ["Best Reverse Engineering", "Fastest Solve"]
-      },
-      "faq": [
-        {
-          "question": "Need prior knowledge?",
-          "answer": "No. Beginner-friendly challenges included."
-        },
-        {
-          "question": "Are hints provided?",
-          "answer": "Yes, possibly with time penalty."
-        },
-        {
-          "question": "Tools like GDB or Burp allowed?",
-          "answer": "Yes."
-        }
-      ],
-      "contact": {
-        "name": "Arjun Patel",
-        "phone": "9823456789",
-        "email": "ctf@techfest2025.com",
-        "venue": "Security Lab - Block C, 2nd Floor"
-      }
-    },
-    {
-      "id": "treasure-hunt",
-      "name": "Treasure Hunt",
-      "icon": "🗺️",
-      "category": "non-technical",
-      "about": "Clue-based, campus-wide event where teams decode puzzles, chase hints, and navigate the area to reach the final destination. Focused on teamwork, speed, and reasoning.",
-      "structure": {
-        "teamType": "Team",
-        "teamSize": 4,
-        "restriction": "Same institution",
-        "rounds": "Progressive clues / eliminations",
-        "clueTypes": ["Riddles", "QR", "Maps", "Puzzles"],
-        "duration": "2 to 2.5 hours",
-        "progression": "Solve clue → next location"
-      },
-      "rules": [
-        "No GPS / phones unless told",
-        "All team members stay together",
-        "Don't interfere with other teams",
-        "Only one team per institution",
-        "Unsafe zones are off-limits",
-        "Judges' decisions are final"
-      ],
-      "schedule": [
-        {
-          "time": "11:45 AM",
-          "activity": "Briefing & instructions"
-        },
-        {
-          "time": "12:00 PM",
-          "activity": "Hunt begins"
-        },
-        {
-          "time": "2:30 PM",
-          "activity": "Final checkpoint"
-        },
-        {
-          "time": "2:30 PM - 3:00 PM",
-          "activity": "Verification & review"
-        },
-        {
-          "time": "3:15 PM",
-          "activity": "Results declared"
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹6,000",
-          "rewards": ["Trophy", "Certificate"]
-        },
-        "second": {
-          "amount": "₹4,000",
-          "rewards": ["Certificate"]
-        },
-        "third": {
-          "amount": "₹2,500",
-          "rewards": ["Certificate", "Swag"]
-        },
-        "special": ["Fastest Completion", "Best Strategy"]
-      },
-      "faq": [
-        {
-          "question": "Can we carry snacks?",
-          "answer": "Yes, if self-managed."
-        },
-        {
-          "question": "Lost a clue?",
-          "answer": "Request a hint with time penalty."
-        },
-        {
-          "question": "Walk-ins?",
-          "answer": "Not allowed. Pre-registration only."
-        }
-      ],
-      "contact": {
-        "name": "Sneha Reddy",
-        "phone": "9912345678",
-        "email": "treasurehunt@techfest2025.com",
-        "venue": "Main Campus Ground"
-      }
-    },
+  "events": {
+    "technical": [
       {
-        "id": "treasure_hunt",
-        "name": "Treasure Hunt",
-        "icon": "🧭",
-        "category": "fun",
-        "about": {
-          "description": "The Treasure Hunt is an exciting multi-round team competition that challenges participants’ logical reasoning, problem-solving, and teamwork skills. Teams navigate through progressive rounds, solving clues and overcoming challenges to reach the final treasure.",
-          "highlights": [
-            "Team size: 4 members per team",
-            "Single team allowed per institution",
-            "Multi-round eliminations leading to the final stage",
-            "Focus on teamwork, logic, and observation",
-            "Attractive prizes for winners and runners-up"
-          ]
-        },
-        "timeline": [
-          { "time": "Round 1", "activity": "Initial clue-solving and elimination" },
-          { "time": "Round 2", "activity": "Intermediate challenge stage" },
-          { "time": "Final Round", "activity": "Ultimate treasure hunt and prize ceremony" }
-        ],
+        "id": 1,
+        "name": "Technical Workshop",
+        "category": "Technical Workshop",
+        "about": "A hands-on session led by experts on emerging technologies like AI, Cloud, and DevOps. You'll get practical exposure and a certificate of participation.",
         "rules": [
-          "Each team must consist of 4 members from the same institution.",
-          "Only one team per institution is allowed.",
-          "No mobile phones, internet, or external help unless explicitly permitted.",
-          "Teams must not damage property or tamper with clues belonging to others.",
-          "Teams must stay together throughout the hunt unless instructed otherwise.",
-          "Skipping clues or interfering with other teams’ progress results in disqualification.",
-          "Organizers’ and judges’ decisions are final and binding."
+          "Individual registration only",
+          "Participants must bring their own laptops"
         ],
-        "faqs": [
+        "coordinator": {
+          "name": "Abhishek Singh",
+          "phone": "9849328717"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Prompt to Product",
+        "category": "Technical",
+        "about": "An event where teams use AI to build a real-world product from an idea. The event ends with a 3-minute product pitch to judges, with the top 5 teams advancing to a Grand Finale.",
+        "rules": [
+          "Team Size: Exactly 3 members",
+          "Participants must bring their own laptops",
+          "Any AI model or tool is permitted",
+          "A final report is required, including tools used, GitHub repo, and deployed link"
+        ],
+        "coordinator": {
+          "name": "Sumit Kumar Gupta",
+          "phone": "7667827034"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Competitive Programming",
+        "category": "Technical",
+        "about": "A timed competition where participants solve algorithmic and logical problems. Your speed, accuracy, and problem-solving skills will be tested on a live leaderboard.",
+        "rulesAndGuidelines": [
+          "Participation: Individual only",
+          "All participants will begin with an equal, fixed number of starting points",
+          "A participant is eliminated if their point total drops to zero or below",
+          "Every code submission must be accompanied by a 'Confidence Wager'. A correct submission rewards you with the problem's value plus your wager. An incorrect submission results in the loss of your wagered points",
+          "The competition ends when only one participant remains, or when the 2-hour time limit expires. If multiple participants remain, the one with the highest point total wins"
+        ],
+        "coordinator": {
+          "name": "Dharya Sharma",
+          "phone": "9045055914"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Capture The Flag (CTF)",
+        "category": "Technical (Cybersecurity)",
+        "about": "A cybersecurity competition where you find hidden \"flags\" in systems. It's a hands-on challenge involving ethical hacking, cryptography, and network security.",
+        "rules": [
+          "Team Size: 1–3 members",
+          "Bring your own laptop with tools pre-installed",
+          "The team that captures the most valid flags wins",
+          "Sharing flags is not allowed"
+        ],
+        "coordinator": {
+          "name": "Abhijeet Kumar Singh",
+          "phone": "9678781811"
+        }
+      },
+      {
+        "id": 5,
+        "name": "24-Hour Hackathon",
+        "category": "Technical",
+        "about": "The flagship 24-hour coding marathon to build a working prototype from an idea. Mentors will be available for guidance.",
+        "rules": [
+          "Team Size: Up to 4 members",
+          "This is a 24-hour on-site event",
+          "Bring your own laptops and accessories",
+          "A final project report with GitHub repo and a demo is required"
+        ],
+        "coordinators": [
           {
-            "question": "Can teams use mobile phones for solving clues?",
-            "answer": "No. The use of mobile phones or external assistance is strictly prohibited unless stated otherwise."
+            "name": "Abhishek Murli",
+            "phone": "6374795699"
           },
           {
-            "question": "How many members can a team have?",
-            "answer": "Each team must have exactly 4 members from the same institution."
-          },
-          {
-            "question": "Are there eliminations in each round?",
-            "answer": "Yes. Teams will be progressively eliminated after each round."
-          },
-          {
-            "question": "What are the prizes?",
-            "answer": "Winners and runners-up will receive certificates and prizes."
-          },
-          {
-            "question": "Is safety ensured during the hunt?",
-            "answer": "Yes. Participants must act responsibly; organizers are not liable for injuries due to negligence."
+            "name": "Sankalp Shankar",
+            "phone": "9153946929"
           }
-        ],
-        "contact": {
-          "name": "Event Coordinator",
-          "role": "Treasure Hunt Organizer",
-          "phone": "",
-          "email": "",
-          "venue": "Acharya Campus, Bangalore"
-        }
-      },
-    {
-      "id": "chess",
-      "name": "Chess Tournament",
-      "icon": "♟️",
-      "category": "non-technical",
-      "about": "A strategic, FIDE-rule chess competition using either Swiss or knockout system based on participation.",
-      "structure": {
-        "teamType": "Individual",
-        "format": "Swiss or Knockout",
-        "timeControl": "10 min per player",
-        "rounds": "5-7 based on turnout",
-        "equipment": "Boards, clocks provided",
-        "pairing": "Random pairing for Round 1, then skill-based"
-      },
-      "rules": [
-        "Touch move enforced",
-        "Two illegal moves = loss",
-        "5 min late = forfeit",
-        "No devices allowed",
-        "Arbiter decisions final"
-      ],
-      "schedule": [
-        {
-          "round": "Round 1",
-          "time": "10:00 AM",
-          "notes": "First match begins"
-        },
-        {
-          "round": "Final",
-          "time": "12:30 PM",
-          "notes": "Championship match"
-        },
-        {
-          "round": "Awards",
-          "time": "4:30 PM",
-          "notes": "Prizes & closing"
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹4,000",
-          "rewards": ["Trophy", "Certificate"]
-        },
-        "second": {
-          "amount": "₹2,500",
-          "rewards": ["Certificate"]
-        },
-        "third": {
-          "amount": "₹1,500",
-          "rewards": ["Certificate", "Swag"]
-        },
-        "special": ["Best Game", "Most Aggressive"]
-      },
-      "faq": [
-        {
-          "question": "Own clock?",
-          "answer": "No. Use official equipment."
-        },
-        {
-          "question": "Draws allowed?",
-          "answer": "Yes, per FIDE or tie-break rules."
-        }
-      ],
-      "contact": {
-        "name": "Basavakiran",
-        "phone": "9353945902",
-        "email": "chess@techfest2025.com",
-        "venue": "Indoor Sports Hall"
-      }
-    },
-    {
-      "id": "bgmi",
-      "name": "BGMI Tournament",
-      "icon": "🎮",
-      "category": "gaming",
-      "about": "Mobile e-sports tournament on Erangel map. Team battle royale format with tactical, reflexive gameplay.",
-      "structure": {
-        "teamType": "Team",
-        "teamSize": 4,
-        "minimumPresent": 3,
-        "platform": "Mobile",
-        "entryFee": "₹200/team",
-        "matchCount": "Multiple rounds",
-        "settings": "Standard competitive"
-      },
-      "rules": [
-        "No emulators or hacks",
-        "External help banned",
-        "Technical issues = player's responsibility",
-        "Disputes must be raised immediately"
-      ],
-      "schedule": [
-        {
-          "match": "Match 1",
-          "time": "2:00 PM - 2:25 PM"
-        },
-        {
-          "match": "Match 2",
-          "time": "3:00 PM - 3:25 PM"
-        },
-        {
-          "match": "Final",
-          "time": "4:30 PM - 5:00 PM"
-        },
-        {
-          "match": "Results",
-          "time": "5:15 PM"
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹7,000",
-          "rewards": ["Trophy", "Certificate"]
-        },
-        "second": {
-          "amount": "₹4,500",
-          "rewards": ["Certificate"]
-        },
-        "third": {
-          "amount": "₹2,500",
-          "rewards": ["Certificate", "Swag"]
-        },
-        "special": ["MVP", "Most Kills", "Best Strategy"]
-      },
-      "faq": [
-        {
-          "question": "All remote?",
-          "answer": "No. 3 must be onsite."
-        },
-        {
-          "question": "Disconnect mid match?",
-          "answer": "Match continues."
-        }
-      ],
-      "contact": {
-        "name": "Vikram Singh",
-        "phone": "9834567890",
-        "email": "bgmi@techfest2025.com",
-        "venue": "Gaming Arena - Block D, Ground Floor"
-      }
-    },
-    {
-      "id": "fifa",
-      "name": "FIFA Tournament (EA FC 24)",
-      "icon": "⚽",
-      "category": "gaming",
-      "about": "1v1 knockout digital football competition using standard club teams.",
-      "structure": {
-        "teamType": "Individual",
-        "format": "Single elimination",
-        "platform": "PC or Console",
-        "entryFee": "₹150/player",
-        "mode": "Kick Off (no FUT)",
-        "attendance": "Mandatory onsite"
-      },
-      "rules": [
-        "No FUT or custom teams",
-        "Own controllers allowed",
-        "Settings are fixed",
-        "Disconnects handled by referees"
-      ],
-      "schedule": [
-        {
-          "round": "Round of 16",
-          "time": "10:00 AM - 12:00 PM"
-        },
-        {
-          "round": "Quarterfinals",
-          "time": "12:30 PM - 1:30 PM"
-        },
-        {
-          "round": "Semis",
-          "time": "2:00 PM - 2:30 PM"
-        },
-        {
-          "round": "Final",
-          "time": "3:00 PM - 3:30 PM"
-        },
-        {
-          "round": "Awards",
-          "time": "4:00 PM onwards"
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹5,000",
-          "rewards": ["Trophy", "Certificate"]
-        },
-        "second": {
-          "amount": "₹3,000",
-          "rewards": ["Certificate"]
-        },
-        "third": {
-          "amount": "₹2,000",
-          "rewards": ["Certificate", "Swag"]
-        },
-        "special": ["Highest Goals", "Best Comeback"]
-      },
-      "faq": [
-        {
-          "question": "Custom tactics allowed?",
-          "answer": "No. Fixed settings only."
-        }
-      ],
-      "contact": {
-        "name": "Rohan Mehta",
-        "phone": "9867543210",
-        "email": "fifa@techfest2025.com",
-        "venue": "Gaming Arena - Block D, Ground Floor"
-      }
-    },
-    {
-      "id": "valorant",
-      "name": "Valorant Tournament",
-      "icon": "🔫",
-      "category": "gaming",
-      "about": "5v5 tactical shooter tournament using standard competitive format and maps.",
-      "structure": {
-        "teamType": "Team",
-        "teamSize": 5,
-        "minimumPresent": 3,
-        "entryFee": "₹250/team",
-        "matchFormat": "Bracket / Best-of rounds",
-        "platform": "Teams bring own PCs"
-      },
-      "rules": [
-        "Cheats, hacks, macros banned",
-        "No delays beyond grace period",
-        "No coaching or interference",
-        "Disconnects = continue unless severe",
-        "Admin decisions are final"
-      ],
-      "schedule": [
-        {
-          "stage": "Round of 16",
-          "time": "4:00 PM - 5:00 PM",
-          "format": "BO1"
-        },
-        {
-          "stage": "Quarterfinals",
-          "time": "5:30 PM - 6:30 PM",
-          "format": "BO3"
-        },
-        {
-          "stage": "Semis",
-          "time": "7:00 PM - 8:00 PM",
-          "format": "BO3"
-        },
-        {
-          "stage": "Final",
-          "time": "8:30 PM - 9:30 PM",
-          "format": "BO3"
-        },
-        {
-          "stage": "Awards",
-          "time": "10:00 PM onwards",
-          "format": ""
-        }
-      ],
-      "prizes": {
-        "first": {
-          "amount": "₹12,000",
-          "rewards": ["Trophy", "Certificates"]
-        },
-        "second": {
-          "amount": "₹7,000",
-          "rewards": ["Certificates"]
-        },
-        "third": {
-          "amount": "₹4,000",
-          "rewards": ["Certificates", "Swag"]
-        },
-        "special": ["MVP", "Most Kills", "Best Clutch"]
-      },
-      "faq": [
-        {
-          "question": "Can all 5 play remotely?",
-          "answer": "No. At least 3 must be present."
-        },
-        {
-          "question": "Streaming allowed?",
-          "answer": "Only after match and with permission."
-        }
-      ],
-      "contact": {
-        "name": "Aditya Gupta",
-        "phone": "9801234567",
-        "email": "valorant@techfest2025.com",
-        "venue": "E-Sports Arena - Block E, 1st Floor"
-      }
-    },
-    {
-      "id": "ideathon",
-      "name": "Ideathon",
-      "icon": "🚀",
-      "category": "technical",
-      "about": {
-        "description": "The Startup Pitch Competition challenges participants to think like entrepreneurs and present their innovative product ideas to a panel of judges. Teams will create a 10-slide investor pitch deck and deliver a 3-minute live pitch focusing on Go-to-Market strategy, Financials, Innovation, and Impact. This event provides a real-world startup experience and helps participants sharpen their pitching, planning, and presentation skills.",
-        "highlights": [
-          "Team size: 3–5 members",
-          "Create a 10-slide investor pitch deck",
-          "Deliver a 3-minute live pitch presentation",
-          "Focus on innovation, financial viability, and impact",
-          "Attractive awards for best pitch, product plan, and prototype"
         ]
       },
-      "timeline": [
-        { "time": "Phase 1", "activity": "Team formation and idea finalization" },
-        { "time": "Phase 2", "activity": "Preparation of the 10-slide investor pitch deck" },
-        { "time": "Phase 3", "activity": "3-minute live pitch presentation before judges" },
-        { "time": "Phase 4", "activity": "Evaluation based on Go-to-Market, Financials, Innovation, Impact, and Q&A handling" },
-        { "time": "Phase 5", "activity": "Results and awards announcement" }
-      ],
-      "rules": [
-        "Each team must consist of 3–5 members with diverse roles (technical, business, design, presentation).",
-        "All ideas must be original and should aim to solve a real-world problem.",
-        "Pitch decks should not exceed 10 slides.",
-        "The live pitch should strictly be within 3 minutes.",
-        "Any plagiarism or use of pre-existing startup ideas will lead to disqualification.",
-        "Judges' decisions are final and binding."
-      ],
-      "faqs": [
-        {
-          "question": "Can we choose any product idea?",
-          "answer": "Yes. Teams are free to select any idea that is innovative, viable, and solves a real problem."
-        },
-        {
-          "question": "Do we need a working prototype?",
-          "answer": "A working prototype is not mandatory but is encouraged to strengthen your pitch."
-        },
-        {
-          "question": "How many members can be in a team?",
-          "answer": "Teams can have a minimum of 3 and a maximum of 5 members."
-        },
-        {
-          "question": "How long should the pitch presentation be?",
-          "answer": "Each team gets exactly 3 minutes for their live pitch."
-        },
-        {
-          "question": "What are the award categories?",
-          "answer": "Best Product Plan, Best Prototype Execution, and Best Pitch Delivery."
+      {
+        "id": 6,
+        "name": "CAED – Computer-Aided Engineering Drawing",
+        "category": "Technical",
+        "about": "A design challenge focused on precision and creativity using CAD software. Participants will create 2D/3D models based on provided specifications.",
+        "rules": [
+          "Individual participation only",
+          "Bring your own laptop with licensed or educational CAD software (e.g., AutoCAD, SolidWorks)",
+          "Evaluation is based on creativity, accuracy, and presentation"
+        ],
+        "coordinator": {
+          "name": "TBD",
+          "phone": ""
         }
-      ],
-      "contact": {
-        "name": "Student Coordinator",
-        "role": "Event Coordinator",
-        "phone": "6369113266",
-        "email": "",
-        "venue": ""
+      },
+      {
+        "id": 7,
+        "name": "Circuit Mania",
+        "category": "Technical",
+        "about": "A hands-on event for designing, analyzing, and troubleshooting electronic circuits. Challenges will be based on real-world applications.",
+        "rules": [
+          "Team Size: 1–3 members",
+          "Bring your own kits or laptops if needed. Some components will be provided",
+          "AI-assisted simulation tools are allowed",
+          "Evaluation is based on design efficiency, innovation, and accuracy"
+        ],
+        "coordinator": {
+          "name": "TBD",
+          "phone": ""
+        }
+      },
+      {
+        "id": 8,
+        "name": "Ideathon",
+        "category": "Technical / Business",
+        "about": "Create a 10-slide investor pitch deck and deliver a compelling 3-minute live pitch. Evaluation will focus on your Go-to-Market strategy, Financials, Innovation, Impact, and Q&A Handling.",
+        "rules": [
+          "Team Preparation (3–5 Members): Ensure your team has a diverse mix of skills (technical, business, design)",
+          "Choose a Product Idea: Select an innovative, commercially viable idea that solves a real problem",
+          "Build the 10-Slide Investor Pitch Deck"
+        ],
+        "pitchDeckSlides": [
+          "Slide 1: Title Slide - Project Name, Team Name, Tagline",
+          "Slide 2: Problem Statement - Define the problem clearly",
+          "Slide 3: Solution Overview - Explain your product/service",
+          "Slide 4: Market Opportunity - Define target users and market size",
+          "Slide 5: Go-To-Market Strategy - Detail customer acquisition plans",
+          "Slide 6: Business Model - Explain your revenue model",
+          "Slide 7: Financial Viability - Projections, costs, and funding needs",
+          "Slide 8: Innovation & Differentiation - Highlight unique features",
+          "Slide 9: Impact Potential - Describe social/economic benefits",
+          "Slide 10: Ask + Closing - State funding needs and close strongly"
+        ],
+        "coordinator": {
+          "name": "Farhan",
+          "phone": "9037712957"
+        }
       }
-    }
-  ]
+    ],
+    "gaming": [
+      {
+        "id": 9,
+        "name": "PUBG MOBILE (Battle Royale)",
+        "category": "Gaming",
+        "about": "Enter the battleground and fight for survival in the classic Erangel map! Compete in intense matches where strategy, teamwork, and skill decide who becomes the last squad standing.",
+        "rules": [
+          "Team Size: Maximum 4 players",
+          "Attendance: Minimum 3 players must be present physically; 1 can play online",
+          "Format: Battle Royale format only",
+          "Equipment: Players must use their own mobile devices"
+        ],
+        "coordinator": {
+          "name": "Aswin Kumar",
+          "phone": "9431577982"
+        }
+      },
+      {
+        "id": 10,
+        "name": "VALORANT",
+        "category": "Gaming",
+        "about": "Assemble your squad of agents and dive into tactical 5v5 battles! Compete in thrilling matches that test coordination, reflexes, and strategy.",
+        "rules": [
+          "Team Size: Maximum 5 players",
+          "Attendance: At least 3 players must be present physically; 2 may play online",
+          "Equipment: Teams must bring their own equipment (laptop/PC, keyboard, mouse, headset)"
+        ],
+        "coordinator": {
+          "name": "Aswin Kumar",
+          "phone": "9431577982"
+        }
+      },
+      {
+        "id": 11,
+        "name": "FIFA (EA FC 24 or Latest Version)",
+        "category": "Gaming",
+        "about": "Step onto the virtual pitch and showcase your football finesse! Experience the thrill of one-on-one matches.",
+        "rules": [
+          "Format: Solo competition (1v1)",
+          "Attendance: Physical attendance is compulsory",
+          "Controllers: Bring your own or use the limited ones available"
+        ],
+        "coordinator": {
+          "name": "Aswin Kumar",
+          "phone": "9431577982"
+        }
+      },
+      {
+        "id": 14,
+        "name": "Chess Tournament",
+        "category": "Gaming",
+        "about": "A battle of wits following FIDE (World Chess Federation) Rules.",
+        "tournamentFormat": "Matches will follow FIDE (World Chess Federation) Rules. The format will be Knockout or Swiss, depending on the number of participants",
+        "timeControl": "Rapid: 5 minutes + 3 seconds increment. The final time control will be announced before each round",
+        "basicRules": [
+          "Touch-Move Rule applies",
+          "Two illegal moves result in the loss of the game",
+          "No external help or devices are allowed",
+          "Arriving more than 5 minutes late will result in forfeiture",
+          "The arbiter's or organizer's decision is final"
+        ],
+        "coordinator": {
+          "name": "Basavakiran",
+          "phone": "9353945902"
+        }
+      }
+    ],
+    "nonTechnical": [
+      {
+        "id": 12,
+        "name": "TREASURE HUNT",
+        "category": "Non-Technical",
+        "about": "Unleash your inner detective and race against time! Follow a trail of hidden clues, solve riddles, and collaborate with your team to uncover the ultimate treasure.",
+        "rules": [
+          "Team Size: 4 members (from the same institution)",
+          "Entry Limit: Only one team per institution is allowed",
+          "Restrictions: Use of mobile phones or internet is strictly prohibited unless permitted"
+        ],
+        "coordinator": {
+          "name": "Akshaya",
+          "phone": "8904724499"
+        }
+      },
+      {
+        "id": 13,
+        "name": "Bridge Building",
+        "category": "Non-Technical",
+        "about": "A design challenge focused on precision and creativity. Participants will construct a model bridge from provided materials based on specifications, which will then be tested for its load-bearing capacity.",
+        "rules": [
+          "Team Size: 2-4 members",
+          "All materials will be provided on-site. Using external materials is prohibited",
+          "Evaluation is based on creativity, design efficiency, and the weight the bridge can withstand"
+        ],
+        "coordinator": {
+          "name": "TBD",
+          "phone": ""
+        }
+      }
+    ]
+  },
+  "gamingCoordinator": {
+    "name": "Aswin Kumar",
+    "phone": "9431577982"
+  }
 }
