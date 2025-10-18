@@ -690,6 +690,21 @@ function Register() {
                   <p className="text-sm text-gray-500 text-center">
                     Use any qr-code scan app to scan and complete the payment
                   </p>
+                  
+                  {/* Prominent Payment Link */}
+                  <div className="mt-6 mb-4 p-4 bg-blue-900/30 border-2 border-blue-500 rounded-lg">
+                    <p className="text-lg text-center text-white font-semibold mb-2">
+                      💳 Prefer Online Payment?
+                    </p>
+                    <a 
+                      href="https://www.acharyaerptech.in/ExternalPayment/243"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-center rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                      Click Here to Pay Online →
+                    </a>
+                  </div>
+
                   <div className="mt-4 p-4 bg-orange-900/30 border-2 border-orange-500 rounded-lg">
                     <p className="text-sm text-orange-200 text-center">
                       ⚠️ <strong>IMPORTANT:</strong> When making the payment, enter the exact amount of <strong>₹{totalPrice}</strong> as shown above. The payment amount must match the total registration fee.

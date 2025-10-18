@@ -1,13 +1,13 @@
 import React from 'react';
-import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { cn } from '../lib/utils';
 
 function Footer({ className }) {
   const socialLinks = [
-    { icon: <FaGithub />, href: 'https://github.com' },
-    { icon: <FaTwitter />, href: 'https://twitter.com' },
-    { icon: <FaLinkedin />, href: 'https://linkedin.com' },
-    { icon: <FaInstagram />, href: 'https://instagram.com' },
+    { icon: <FaGithub />, href: 'https://github.com/thisisthebigo' },
+    { icon: <FaEnvelope />, href: 'mailto:thisisthebigo@gmail.com' },
+    { icon: <FaLinkedin />, href: 'https://www.linkedin.com/groups/10014219/' },
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/thisisthebigo/' },
   ];
 
   return (

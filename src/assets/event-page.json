@@ -35,7 +35,7 @@
         "id": 3,
         "name": "Competitive Programming",
         "category": "Technical",
-        "about": "A timed competition where participants solve algorithmic and logical problems. Your speed, accuracy, and problem-solving skills will be tested on a live leaderboard.",
+        "about": "Welcome to a competitive programming arena where your code is your currency. In this high-stakes survival event, participants must strategically manage their points to acquire new challenges and place wagers on their own solutions. It's a thrilling test of not just coding skill, but also of confidence, risk management, and nerve under pressure.",
         "rulesAndGuidelines": [
           "Participation: Individual only",
           "All participants will begin with an equal, fixed number of starting points",
@@ -44,7 +44,7 @@
           "The competition ends when only one participant remains, or when the 2-hour time limit expires. If multiple participants remain, the one with the highest point total wins"
         ],
         "coordinator": {
-          "name": "Dharya Sharma",
+          "name": "Dhairya Sharma",
           "phone": "9045055914"
         }
       },
