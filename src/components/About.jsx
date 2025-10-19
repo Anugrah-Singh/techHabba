@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 
-const words = `Tech Habba is where innovation meets inspiration. Join thousands of tech enthusiasts, developers, and visionaries for an unforgettable journey through cutting-edge technology. Experience groundbreaking workshops, thrilling competitions, and insights from industry leaders. Here, ideas transform into reality, and the future of technology unfolds before your eyes.`;
+const words = `Tech Habba is Acharya's flagship annual technology festival, bringing together students, developers, and tech enthusiasts for three days of innovation and competition. Hosted on our 120-acre campus in Bangalore, the fest features technical competitions, hands-on workshops, and gaming tournaments across coding, cybersecurity, electronics, and more—providing a platform to showcase skills, learn from experts, and connect with the tech community.`;
 
 function About() {
   return (
