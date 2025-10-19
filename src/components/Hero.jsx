@@ -2,12 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useIsMobile } from '../hooks/useMediaQuery';
+import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
+import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 
 function Hero() {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
+  
+  // Event date: November 13, 2025 at 8:00 AM
+  const eventDate = new Date('2025-11-13T08:00:00');
+  
   return (
-    <div className="relative mx-auto mt-16 md:mt-32 mb-10 flex max-w-7xl flex-col items-center justify-center">
+    <div className="relative mx-auto mt-16 md:mt-32 mb-10 flex max-w-7xl flex-col items-center justify-center px-4 md:px-6 lg:px-8">
       {/* Decorative borders - hidden on mobile */}
       {!isMobile && (
         <>
@@ -23,7 +29,7 @@ function Hero() {
         </>
       )}
       
-      <div className="px-4 py-8 md:py-10 lg:py-20">
+      <div className="w-full py-8 md:py-10 lg:py-20">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center text-3xl sm:text-4xl font-bold text-slate-700 md:text-5xl lg:text-7xl dark:text-slate-300">
           {"Experience the Future of Technology at Tech Habba"
             .split(" ")
@@ -67,18 +73,18 @@ function Hero() {
             duration: 0.3,
             delay: 1,
           }}
-          className="relative z-10 mt-6 md:mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
+          className="relative z-10 mt-6 md:mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 px-4 md:px-0">
           <button
             onClick={() => {
               const el = document.getElementById('events');
               if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }}
-            className="w-full sm:w-60 transform rounded-lg bg-black px-6 py-3 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+            className="w-auto min-w-[200px] sm:w-60 transform rounded-lg bg-black px-6 py-3 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
             Explore Events
           </button>
           <button
             onClick={() => navigate('/register')}
-            className="w-full sm:w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+            className="w-auto min-w-[200px] sm:w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
             Register Now
           </button>
         </motion.div>
@@ -95,14 +101,36 @@ function Hero() {
             duration: 0.3,
             delay: 1.2,
           }}
-          className="relative z-10 mt-12 md:mt-20 rounded-2xl md:rounded-3xl border border-neutral-200 bg-neutral-100 p-2 md:p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900">
-          <div className="w-full overflow-hidden rounded-lg md:rounded-xl border border-gray-300 dark:border-gray-700">
-            <img
-              src="https://images.pexels.com/photos/11308989/pexels-photo-11308989.jpeg"
-              alt="Tech Habba event preview"
-              className="aspect-[16/9] h-auto w-full object-cover"
-              loading="lazy"
-            />
+          className="relative z-10 mt-12 md:mt-20 mx-0 rounded-2xl md:rounded-3xl border border-neutral-800 bg-transparent p-2 md:p-8 lg:p-12">
+          <div className="flex flex-col items-center justify-center space-y-4 md:space-y-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-neutral-200 px-2">
+              Event Starts In
+            </h2>
+            <div className="w-full flex justify-center scale-90 sm:scale-100">
+              <FlipClockCountdown
+                to={eventDate}
+                labels={['DAYS', 'HOURS', 'MINUTES', 'SECONDS']}
+                labelStyle={{
+                  fontSize: isMobile ? 7 : 14,
+                  fontWeight: 500,
+                  textTransform: 'uppercase',
+                  color: '#9ca3af',
+                }}
+                digitBlockStyle={{
+                  width: isMobile ? 28 : 60,
+                  height: isMobile ? 42 : 80,
+                  fontSize: isMobile ? 24 : 50,
+                  background: '#1f2937',
+                  color: '#ffffff',
+                }}
+                dividerStyle={{ color: 'transparent', height: 0 }}
+                separatorStyle={{ color: '#9ca3af', size: isMobile ? '3px' : '6px' }}
+                duration={0.5}
+              />
+            </div>
+            <p className="text-sm md:text-base text-center text-neutral-600 dark:text-neutral-400 max-w-2xl px-4">
+              November 13-15, 2025 • Join us for three days of innovation and technology
+            </p>
           </div>
         </motion.div>
       </div>

@@ -9,7 +9,7 @@ function NewCTA() {
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
         Ready to Join the Future?
       </h2>
-      <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+      <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-8">
         Don't miss out on the biggest tech event of the year. Register now to secure your spot and be a part of the innovation, learning, and networking at Tech Habba 2025.
       </p>
       <button
