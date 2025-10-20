@@ -54,12 +54,13 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm h-full w-full z-[100]"
+            onClick={(e) => e.stopPropagation()}
           />
         )}
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0 grid place-items-center z-[100] p-4">
+          <div className="fixed inset-0 grid place-items-center z-[100] p-4" onClick={(e) => e.stopPropagation()}>
             <motion.button
               key={`button-${active.name}-${id}`}
               layout
@@ -67,7 +68,18 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.05 } }}
               className="flex absolute top-4 right-4 items-center justify-center bg-white rounded-full h-10 w-10 hover:bg-neutral-100 transition-colors z-[110]"
-              onClick={() => setActive(null)}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                e.nativeEvent.stopImmediatePropagation();
+                setActive(null);
+              }}
+              onPointerDown={(e) => {
+                e.stopPropagation();
+              }}
+              onTouchStart={(e) => {
+                e.stopPropagation();
+              }}
             >
               <X className="h-5 w-5 text-black" />
             </motion.button>
@@ -76,6 +88,7 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
               layoutId={`card-${active.name}-${id}`}
               ref={ref}
               className="w-full max-w-5xl h-full md:h-fit md:max-h-[90vh] flex flex-col bg-gradient-to-br from-neutral-900 to-neutral-800 border border-white/10 sm:rounded-3xl overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
             >
               {/* Header with Icon and Title */}
               <motion.div 
@@ -104,7 +117,8 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.stopPropagation();
                       setActive(null);
                       navigate('/register');
                     }}
@@ -403,7 +417,8 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
                 <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setActive(null);
                     navigate('/register');
                   }}

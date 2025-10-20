@@ -39,15 +39,6 @@ const nonTechnicalEvents = [
   'Chess Tournament'
 ];
 
-// Events that require teams
-const teamEvents = [
-  'Ideathon',
-  'BGMI',
-  'Valorant Tournament',
-  'Treasure Hunt',
-  'Bridge Building Competition'
-];
-
 function Register() {
   const navigate = useNavigate();
   
@@ -61,11 +52,6 @@ function Register() {
     year: '',
     studentId: '',
     selectedEvents: [],
-    isTeam: false,
-    teamName: '',
-    teamSize: '',
-    teamLeaderName: '',
-    teamMemberDetails: '',
     paymentId: '',
     declaration1: false,
     declaration2: false,
@@ -73,7 +59,7 @@ function Register() {
     declaration4: false
   });
 
-  const [showTeamSection, setShowTeamSection] = useState(false);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(null);
@@ -106,10 +92,6 @@ function Register() {
         ...prev,
         selectedEvents: updatedEvents
       }));
-
-      // Check if any selected event requires a team
-      const requiresTeam = updatedEvents.some(event => teamEvents.includes(event));
-      setShowTeamSection(requiresTeam);
     } else if (type === 'checkbox') {
       setFormData(prev => ({
         ...prev,
@@ -199,16 +181,6 @@ function Register() {
       console.log('❌ Validation failed: Declarations not accepted');
       alert('Please accept all declarations to continue.');
       return;
-    }
-
-    // Validate team details if applicable
-    if (showTeamSection && formData.isTeam) {
-      if (!formData.teamName || !formData.teamSize || !formData.teamMemberDetails) {
-        e.preventDefault();
-        console.log('❌ Validation failed: Team details missing');
-        alert('Please fill in all team details.');
-        return;
-      }
     }
 
     // Validate payment ID if events are selected
@@ -531,96 +503,46 @@ function Register() {
               </div>
             </div>
 
-            {/* Section 3: Team Information (Conditional) */}
-            {showTeamSection && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-white border-b border-neutral-700 pb-3">
-                  Team Information
-                </h2>
-                <p className="text-sm text-yellow-400">
-                  ⚠️ You've selected events that require a team. Please fill in team details below.
-                </p>
-
-                <div className="space-y-6">
+            {/* Section 3: Important Note for Team Events */}
+            <div className="space-y-4 bg-gradient-to-r from-blue-900/30 to-purple-900/30 border-2 border-blue-500/50 rounded-xl p-6">
+              <h2 className="text-2xl font-bold text-white border-b border-blue-500/50 pb-3">
+                📋 Important Note for Team Events
+              </h2>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <span className="text-yellow-400 text-2xl mt-1">👥</span>
                   <div>
-                    <label className="flex items-center space-x-3 text-gray-300 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        name="isTeam"
-                        checked={formData.isTeam}
-                        onChange={handleInputChange}
-                        className="w-5 h-5 rounded border-neutral-600 bg-neutral-800 text-blue-600 focus:ring-2 focus:ring-blue-500"
-                      />
-                      <span>Are you registering as a team? <span className="text-red-500">*</span></span>
-                    </label>
+                    <p className="text-lg font-semibold text-white mb-2">
+                      Registering for Team Events?
+                    </p>
+                    <p className="text-gray-300">
+                      If you've selected team-based events (Ideathon, BGMI, Valorant, Treasure Hunt, Bridge Building, etc.), 
+                      please note that <span className="text-yellow-400 font-semibold">only the Team Leader should register</span>.
+                    </p>
                   </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <span className="text-green-400 text-2xl mt-1">📞</span>
+                  <div>
+                    <p className="text-lg font-semibold text-white mb-2">
+                      Team Details Collection
+                    </p>
+                    <p className="text-gray-300">
+                      You <span className="font-semibold">do not need to provide team member details</span> right now. 
+                      Our team will <span className="text-green-400 font-semibold">contact you personally after registration</span> to 
+                      collect complete team information.
+                    </p>
+                  </div>
+                </div>
 
-                  {formData.isTeam && (
-                    <div className="grid md:grid-cols-2 gap-6 pl-8">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">
-                          Team Name <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          name="teamName"
-                          value={formData.teamName}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                          placeholder="Your team name"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium text-gray-300 mb-2">
-                          Team Size <span className="text-red-500">*</span>
-                        </label>
-                        <select
-                          name="teamSize"
-                          value={formData.teamSize}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none cursor-pointer hover:border-neutral-600 transition-colors"
-                          style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em", paddingRight: "2.5rem" }}>
-                          <option value="" className="bg-neutral-900">Select Size</option>
-                          <option value="2" className="bg-neutral-900">2 Members</option>
-                          <option value="3" className="bg-neutral-900">3 Members</option>
-                          <option value="4" className="bg-neutral-900">4 Members</option>
-                          <option value="5" className="bg-neutral-900">5 Members</option>
-                        </select>
-                      </div>
-
-                      <div className="md:col-span-2">
-                        <label className="block text-sm font-medium text-gray-300 mb-2">
-                          Team Leader Name <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          name="teamLeaderName"
-                          value={formData.teamLeaderName}
-                          onChange={handleInputChange}
-                          placeholder="Usually the person filling this form"
-                          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
-
-                      <div className="md:col-span-2">
-                        <label className="block text-sm font-medium text-gray-300 mb-2">
-                          Team Member Details <span className="text-red-500">*</span>
-                        </label>
-                        <textarea
-                          name="teamMemberDetails"
-                          value={formData.teamMemberDetails}
-                          onChange={handleInputChange}
-                          rows="6"
-                          placeholder="Include Name, Email, and College for each team member&#10;Example:&#10;1. John Doe - john@email.com - XYZ College&#10;2. Jane Smith - jane@email.com - ABC College"
-                          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
-                    </div>
-                  )}
+                <div className="mt-4 p-4 bg-blue-900/40 border border-blue-500/50 rounded-lg">
+                  <p className="text-sm text-blue-200 text-center">
+                    💡 <strong>Tip:</strong> Make sure your WhatsApp number and email are correct so we can reach you easily!
+                  </p>
                 </div>
               </div>
-            )}
+            </div>
 
             {/* Section 4: Price Calculator */}
             {formData.selectedEvents.length > 0 && (
@@ -795,7 +717,6 @@ function Register() {
             <input type="hidden" name="selectedEvents" value={formData.selectedEvents.join(', ')} />
             <input type="hidden" name="numberOfEvents" value={formData.selectedEvents.length} />
             <input type="hidden" name="totalAmount" value={totalPrice} />
-            <input type="hidden" name="isTeam" value={formData.isTeam} />
             <input type="hidden" name="timestamp" value={new Date().toISOString()} />
 
             {/* Submit Button */}
