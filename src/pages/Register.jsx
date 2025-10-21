@@ -214,6 +214,27 @@ function Register() {
               Fill in your details to register for the biggest tech event of the year
             </p>
             
+            {/* Hackathon Registration Note */}
+            <div className="mt-6 mx-auto max-w-2xl bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-purple-900/40 border-2 border-purple-500/50 rounded-xl p-6 shadow-lg shadow-purple-500/20">
+              <div className="flex items-center justify-center mb-3">
+                <span className="text-3xl mr-3">💻</span>
+                <h3 className="text-xl font-bold text-white">Looking for Hackathon Registration?</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                To register for our 24-hour Hackathon, please visit the dedicated registration portal
+              </p>
+              <a
+                href="https://the-big-hack.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50">
+                Click Here for Hackathon Registration
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+            
             {/* TESTING ONLY - Uncomment to test success dialog */}
             {/* <button
               onClick={() => setSubmitSuccess(true)}
