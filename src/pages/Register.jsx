@@ -22,7 +22,6 @@ const technicalEvents = [
   'Capture The Flag (CTF)',
   'Ideathon',
   'Prompt to Programming',
-  'Hackathon',
   'CAED',
   'Circuit Mania',
   'Bridge Building Competition'

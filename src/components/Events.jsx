@@ -135,6 +135,9 @@ export default function Events() {
               const eventData = getEventData(event.name);
               const isClickable = eventData !== null && eventData !== undefined;
               
+              // Special handling for Hackathon event
+              const isHackathon = event.name === "Hackathon" || event.name === "24-Hour Hackathon";
+              
               return (
                 <CometCard 
                   key={event.id}
@@ -145,9 +148,15 @@ export default function Events() {
                       "relative h-full p-6 rounded-2xl bg-gradient-to-br border backdrop-blur-sm",
                       colors.card,
                       "flex flex-col justify-between min-h-[280px]",
-                      isClickable && "cursor-pointer transition-all duration-300 hover:scale-105 hover:border-opacity-80"
+                      (isClickable || isHackathon) && "cursor-pointer transition-all duration-300 hover:scale-105 hover:border-opacity-80"
                     )}
-                    onClick={() => isClickable && handleEventClick(event)}
+                    onClick={() => {
+                      if (isHackathon) {
+                        window.open('https://the-big-hack.netlify.app', '_blank');
+                      } else if (isClickable) {
+                        handleEventClick(event);
+                      }
+                    }}
                   >
                     {/* Category Badge */}
                     <div className="absolute top-4 right-4">
@@ -184,7 +193,15 @@ export default function Events() {
                     </div>
                     
                     {/* Click indicator for events with detail pages */}
-                    {isClickable && (
+                    {isHackathon && (
+                      <div className="mt-4 flex items-center gap-2 text-cyan-400 text-sm font-medium">
+                        <span>Register Now</span>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </div>
+                    )}
+                    {isClickable && !isHackathon && (
                       <div className="mt-4 flex items-center gap-2 text-cyan-400 text-sm font-medium">
                         <span>View Details</span>
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
