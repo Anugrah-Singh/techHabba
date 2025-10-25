@@ -16,13 +16,27 @@ import {
   CheckCircle,
   HelpCircle,
   Target,
-  X
+  X,
+  IndianRupee
 } from "lucide-react";
+import priceData from "../assets/price.json";
 
 export function ExpandableEventCard({ active, setActive, eventData }) {
   const id = useId();
   const ref = useRef(null);
   const navigate = useNavigate();
+
+  // Get event price
+  const getEventPrice = (eventName) => {
+    const allPrices = {
+      ...priceData.technicalEvents,
+      ...priceData.gamingEvents,
+      ...priceData.nonTechnicalEvents
+    };
+    return allPrices[eventName] || null;
+  };
+
+  const eventPrice = getEventPrice(eventData?.name);
 
   useEffect(() => {
     function onKeyDown(event) {
@@ -109,9 +123,17 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
                     >
                       {eventData.name}
                     </motion.h3>
-                    <span className="px-3 py-1 text-xs font-medium rounded-full bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 capitalize">
-                      {eventData.category}
-                    </span>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="px-3 py-1 text-xs font-medium rounded-full bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 capitalize">
+                        {eventData.category}
+                      </span>
+                      {eventPrice && (
+                        <span className="px-3 py-1 text-xs font-medium rounded-full bg-green-500/20 border border-green-400/50 text-green-300 flex items-center gap-1">
+                          <IndianRupee className="w-3 h-3" />
+                          {eventPrice}
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <motion.button
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -325,12 +347,31 @@ export function ExpandableEventCard({ active, setActive, eventData }) {
                     <Section icon={HelpCircle} title="Frequently Asked Questions">
                       <div className="space-y-4">
                         {eventData.faq.map((item, idx) => (
-                          <div key={idx} className="bg-neutral-800/50 p-4 rounded-lg border border-white/5">
-                            <div className="font-semibold text-white mb-2 flex items-start gap-2">
-                              <HelpCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                              {item.question}
-                            </div>
-                            <div className="text-neutral-300 text-sm pl-7">{item.answer}</div>
+                          <div key={idx}>
+                            {/* Check if this is a section with subsection */}
+                            {item.section ? (
+                              <div className="space-y-3">
+                                <h4 className="text-lg font-semibold text-cyan-400 mb-3">{item.section}</h4>
+                                {item.items && item.items.map((subItem, subIdx) => (
+                                  <div key={subIdx} className="bg-neutral-800/50 p-4 rounded-lg border border-white/5 ml-4">
+                                    <div className="font-semibold text-white mb-2 flex items-start gap-2">
+                                      <HelpCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                                      {subItem.question}
+                                    </div>
+                                    <div className="text-neutral-300 text-sm pl-7">{subItem.answer}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              /* Regular FAQ item */
+                              <div className="bg-neutral-800/50 p-4 rounded-lg border border-white/5">
+                                <div className="font-semibold text-white mb-2 flex items-start gap-2">
+                                  <HelpCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                                  {item.question}
+                                </div>
+                                <div className="text-neutral-300 text-sm pl-7">{item.answer}</div>
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>

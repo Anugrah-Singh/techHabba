@@ -61,7 +61,7 @@ const categoryColors = {
 const eventNameMapping = {
   "Workshop": "Technical Workshop",
   "Competitive Programming (CP)": "Competitive Programming",
-  "Prompt to Programming": "Prompt to Product",
+  "Prompt to Product": "Prompt to Product",
   "Capture The Flag (CTF)": "Capture The Flag (CTF)",
   "Treasure Hunt": "TREASURE HUNT",
   "Chess Tournament": "Chess Tournament",

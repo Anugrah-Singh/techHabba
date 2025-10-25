@@ -41,7 +41,7 @@ Events are grouped by category for clarity.
 - Competitive Programming (CP)  
 - Capture The Flag (CTF)  
 - Ideathon  
-- Prompt to Programming  
+- Prompt to Product  
 - Hackathon  
 - CAED  
 - Circuit Mania  

@@ -104,17 +104,75 @@
       {
         "id": 7,
         "name": "Circuit Mania",
+        "subtitle": "The Debugging Challenge",
         "category": "Technical",
-        "about": "A hands-on event for designing, analyzing, and troubleshooting electronic circuits. Challenges will be based on real-world applications.",
+        "about": {
+          "description": "A 3-hour gauntlet designed to find the best circuit debuggers. This competition tests both simulation and hands-on hardware debugging skills through two challenging phases.",
+          "highlights": [
+            "Phase 1: Debug pre-bugged circuits in LTspice simulation software",
+            "Phase 2: Fix physically-faulty circuit kits using lab equipment",
+            "Top 25 teams from Phase 1 advance to the hardware challenge",
+            "Race against time and other finalists to demonstrate working circuits"
+          ]
+        },
+        "structure": {
+          "teamSize": "Exactly 3 members",
+          "duration": "3 hours (2:00 PM – 5:00 PM)",
+          "date": "Friday, November 14th",
+          "location": "ECE Block"
+        },
         "rules": [
-          "Team Size: 1–3 members",
-          "Bring your own kits or laptops if needed. Some components will be provided",
-          "AI-assisted simulation tools are allowed",
-          "Evaluation is based on design efficiency, innovation, and accuracy"
+          "Team Size: Each team must consist of exactly three members.",
+          "Entry Fee: The entry fee is ₹150 per team.",
+          "Punctuality: Check-in ends at 2:15 PM. Teams arriving after 2:15 PM will be disqualified with no refund. This schedule is non-negotiable."
+        ],
+        "faq": [
+          {
+            "section": "Phase 1: Simulation Showdown Rules",
+            "items": [
+              {
+                "question": "Equipment",
+                "answer": "One PC will be provided to each team. Teams may not use personal laptops."
+              },
+              {
+                "question": "Submission",
+                "answer": "All answers must be submitted via the official Google Form. Only one submission per team is allowed."
+              },
+              {
+                "question": "Cheating Policy",
+                "answer": "The use of mobile phones, external websites, or any form of communication with other teams is strictly prohibited. Any team caught doing so will be immediately disqualified."
+              },
+              {
+                "question": "Qualification",
+                "answer": "The Top 25 teams with the highest scores will advance. All ties will be broken by the earliest submission timestamp on the Google Form."
+              }
+            ]
+          },
+          {
+            "section": "Phase 2: Hardware Gauntlet Rules",
+            "items": [
+              {
+                "question": "Equipment",
+                "answer": "All necessary components and lab equipment (Oscilloscope, DMM, Power Supply, Breadboard) will be provided. Teams may not use any personal components or tools."
+              },
+              {
+                "question": "Winning Criteria",
+                "answer": "The first three teams to raise their hand and successfully demonstrate the correctly functioning circuit to a judge will be declared the winners."
+              },
+              {
+                "question": "Judge's Decision",
+                "answer": "The judge's decision on a circuit's functionality is final. Arguing with a judge will lead to disqualification."
+              },
+              {
+                "question": "Safety",
+                "answer": "Any team found mishandling or intentionally damaging lab equipment will be disqualified and held liable."
+              }
+            ]
+          }
         ],
         "coordinator": {
-          "name": "TBD",
-          "phone": ""
+          "name": "Sathya M",
+          "phone": "6360111066"
         }
       },
       {
