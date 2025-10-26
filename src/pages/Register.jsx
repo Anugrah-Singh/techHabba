@@ -17,24 +17,24 @@ const departments = [
 const years = ['1st Year', '2nd Year', '3rd Year', '4th Year', 'Other'];
 
 const technicalEvents = [
-  'Workshop',
-  'Competitive Programming (CP)',
+  'Technical Workshop',
+  'Competitive Programming',
   'Capture The Flag (CTF)',
   'Ideathon',
   'Prompt to Product',
-  'CAED',
+  'CAED – Computer-Aided Engineering Drawing',
   'Circuit Mania',
-  'Bridge Building Competition'
+  'Bridge Building'
 ];
 
 const gamingEvents = [
-  'FIFA',
-  'BGMI',
-  'Valorant Tournament'
+  'FIFA (EA FC 24 or Latest Version)',
+  'PUBG MOBILE (Battle Royale)',
+  'VALORANT'
 ];
 
 const nonTechnicalEvents = [
-  'Treasure Hunt',
+  'TREASURE HUNT',
   'Chess Tournament'
 ];
 
