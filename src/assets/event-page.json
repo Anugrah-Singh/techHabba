@@ -111,7 +111,7 @@
           "highlights": [
             "Phase 1: Debug pre-bugged circuits in LTspice simulation software",
             "Phase 2: Fix physically-faulty circuit kits using lab equipment",
-            "Top 25 teams from Phase 1 advance to the hardware challenge",
+            "Top 15 teams from Phase 1 advance to the hardware challenge",
             "Race against time and other finalists to demonstrate working circuits"
           ]
         },
@@ -144,7 +144,7 @@
               },
               {
                 "question": "Qualification",
-                "answer": "The Top 25 teams with the highest scores will advance. All ties will be broken by the earliest submission timestamp on the Google Form."
+                "answer": "The Top 15 teams with the highest scores will advance. All ties will be broken by the earliest submission timestamp on the Google Form."
               }
             ]
           },
@@ -179,23 +179,38 @@
         "id": 8,
         "name": "Ideathon",
         "category": "Technical / Business",
-        "about": "Create a 10-slide investor pitch deck and deliver a compelling 3-minute live pitch. Evaluation will focus on your Go-to-Market strategy, Financials, Innovation, Impact, and Q&A Handling.",
-        "rules": [
-          "Team Preparation (3–5 Members): Ensure your team has a diverse mix of skills (technical, business, design)",
-          "Choose a Product Idea: Select an innovative, commercially viable idea that solves a real problem",
-          "Build the 10-Slide Investor Pitch Deck"
+        "about": {
+          "description": "A two-round business pitch competition where innovation meets strategy. Participants present their business plans or prototypes to internal faculty first, with top teams advancing to pitch before external industry experts.",
+          "highlights": [
+            "Round 1: Business Plan/Prototype Presentation before Internal Faculty Panel",
+            "Round 2: Final Pitch to External Experts from Industry & Academia",
+            "Present Business Model, Revenue Streams, Marketing Plans & Financial Viability",
+            "10-minute presentation followed by Q&A session with the jury panel"
+          ]
+        },
+        "structure": {
+          "teamSize": "Maximum 3 members per team",
+          "date": "13th November 2025",
+          "location": "MBA Department",
+          "rounds": "2"
+        },
+        "schedule": [
+          {
+            "time": "Round 1 (Morning)",
+            "activity": "Business Plan/Prototype Presentation - Internal Faculty Jury"
+          },
+          {
+            "time": "Round 2 (Afternoon)",
+            "activity": "Final Pitch to External Experts - Top teams only"
+          }
         ],
-        "pitchDeckSlides": [
-          "Slide 1: Title Slide - Project Name, Team Name, Tagline",
-          "Slide 2: Problem Statement - Define the problem clearly",
-          "Slide 3: Solution Overview - Explain your product/service",
-          "Slide 4: Market Opportunity - Define target users and market size",
-          "Slide 5: Go-To-Market Strategy - Detail customer acquisition plans",
-          "Slide 6: Business Model - Explain your revenue model",
-          "Slide 7: Financial Viability - Projections, costs, and funding needs",
-          "Slide 8: Innovation & Differentiation - Highlight unique features",
-          "Slide 9: Impact Potential - Describe social/economic benefits",
-          "Slide 10: Ask + Closing - State funding needs and close strongly"
+        "rules": [
+          "Open to all UG & PG students",
+          "Team size: Maximum 3 members per team",
+          "Ideas should focus on innovation, feasibility, and real-world impact",
+          "Shortlisted teams will present their business plan or prototype offline",
+          "Each team will get 10 minutes for presentation and discussion",
+          "The jury's decision will be final and binding"
         ],
         "coordinator": {
           "name": "Farhan",
