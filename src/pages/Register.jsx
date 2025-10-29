@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BackgroundLines } from '../ui/background-lines';
 import priceData from '../assets/price.json';
+import toast, { Toaster } from 'react-hot-toast';
 
 const departments = [
   'Computer Science & Engineering',
@@ -173,6 +174,22 @@ function Register() {
     console.log('📤 handleSubmit called', e);
     console.log('🔍 Current formData:', formData);
     
+    // Validate events are selected
+    if (formData.selectedEvents.length === 0) {
+      e.preventDefault();
+      console.log('❌ Validation failed: No events selected');
+      toast.error('Please select at least one event to register!', {
+        duration: 4000,
+        position: 'top-center',
+        style: {
+          background: '#ef4444',
+          color: '#fff',
+          fontWeight: 'bold',
+        },
+      });
+      return;
+    }
+    
     // Validate all declarations are checked
     if (!formData.declaration1 || !formData.declaration2 || 
         !formData.declaration3 || !formData.declaration4) {
@@ -197,6 +214,7 @@ function Register() {
 
   return (
     <div className="min-h-screen bg-black w-full overflow-x-hidden">
+      <Toaster />
       <BackgroundLines className="absolute inset-0" />
       <div className="relative z-10 w-full">
         <div className="max-w-4xl mx-auto px-4 py-12">
@@ -751,7 +769,7 @@ function Register() {
                 type="submit"
                 onClick={(e) => console.log('🖱️ Submit button clicked!', e)}
                 className="pageclip-form__submit w-full sm:flex-1 inline-flex h-12 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:opacity-50 disabled:cursor-not-allowed animate-[shimmer_2s_linear_infinite]"
-                disabled={isSubmitting}>
+                disabled={isSubmitting || formData.selectedEvents.length === 0}>
                 <span className="text-white font-semibold">{isSubmitting ? 'Submitting...' : 'Submit Registration'}</span>
               </button>
             </div>
