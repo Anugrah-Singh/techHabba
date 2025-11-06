@@ -6,6 +6,8 @@ import Events from '../components/Events';
 import AboutAcharyaSection from '../components/AboutAcharyaSection';
 import TimelineComponent from '../components/TimelineComponent';
 import NewCTA from '../components/NewCTA';
+import Sponsors from '../components/Sponsors';
+import SponsorsAndPartners from '../components/SponsorsAndPartners';
 import Footer from '../components/Footer';
 import { BackgroundLines } from '../ui/background-lines';
 
@@ -21,6 +23,8 @@ function Home() {
           <Events />
           <AboutAcharyaSection />
           <TimelineComponent />
+          <SponsorsAndPartners />
+          <Sponsors />
           <NewCTA />
         </main>
         <Footer />
