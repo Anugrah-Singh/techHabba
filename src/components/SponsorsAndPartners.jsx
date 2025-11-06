@@ -116,7 +116,7 @@ const SponsorsAndPartners = () => {
             <div className="relative px-4 md:px-8 py-3 md:py-4 bg-black rounded-lg leading-none flex items-center">
               <span className="text-sm md:text-base text-gray-300 group-hover:text-white transition duration-200">
                 Interested in sponsoring?{' '}
-                <a href="mailto:ieee@acharya.ac.in" className="text-blue-400 hover:text-blue-300 font-semibold">
+                <a href="mailto:thisisthebigo@gmail.com" className="text-blue-400 hover:text-blue-300 font-semibold">
                   Contact us
                 </a>
               </span>
