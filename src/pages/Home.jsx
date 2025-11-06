@@ -20,11 +20,12 @@ function Home() {
         <main className="pt-8 w-full overflow-x-hidden pb-24">
           <Hero />
           <About />
+          <SponsorsAndPartners />
           <Events />
           <AboutAcharyaSection />
           <TimelineComponent />
           <SponsorsAndPartners />
-          <Sponsors />
+          {/* <Sponsors /> */}
           <NewCTA />
         </main>
         <Footer />
