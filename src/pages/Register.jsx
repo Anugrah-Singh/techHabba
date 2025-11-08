@@ -479,32 +479,21 @@ function Register() {
                     Technical Events
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
-                    {technicalEvents.map(event => {
-                      const isPaused = event === 'Technical Workshop';
-                      return (
-                        <label 
-                          key={event} 
-                          className={`flex items-center space-x-3 ${isPaused ? 'text-gray-500 cursor-not-allowed' : 'text-gray-300 hover:text-white cursor-pointer'}`}>
-                          <input
-                            type="checkbox"
-                            name="selectedEvents"
-                            value={event}
-                            checked={formData.selectedEvents.includes(event)}
-                            onChange={handleInputChange}
-                            disabled={isPaused}
-                            className="w-5 h-5 rounded border-neutral-600 bg-neutral-800 text-blue-600 focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
-                          />
-                          <span className="flex items-center gap-2">
-                            {event}
-                            {isPaused && (
-                              <span className="text-xs px-2 py-1 bg-red-900/30 border border-red-500/50 rounded text-red-400 font-semibold">
-                                Registration Paused
-                              </span>
-                            )}
-                          </span>
-                        </label>
-                      );
-                    })}
+                    {technicalEvents.map(event => (
+                      <label 
+                        key={event} 
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white cursor-pointer">
+                        <input
+                          type="checkbox"
+                          name="selectedEvents"
+                          value={event}
+                          checked={formData.selectedEvents.includes(event)}
+                          onChange={handleInputChange}
+                          className="w-5 h-5 rounded border-neutral-600 bg-neutral-800 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                        />
+                        <span>{event}</span>
+                      </label>
+                    ))}
                   </div>
                 </div>
 
