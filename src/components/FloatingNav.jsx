@@ -7,6 +7,7 @@ import {
   IconSchool,
   IconTimeline,
   IconMail,
+  IconUserStar,
 } from "@tabler/icons-react";
 
 export function FloatingNav() {
@@ -24,6 +25,13 @@ export function FloatingNav() {
         <IconInfoCircle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#about",
+    },
+    {
+      title: "Chief Guest",
+      icon: (
+        <IconUserStar className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#chief-guest",
     },
     {
       title: "Events",

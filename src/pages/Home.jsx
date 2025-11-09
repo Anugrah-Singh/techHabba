@@ -2,6 +2,7 @@ import React from 'react';
 import { FloatingNav } from '../components/FloatingNav';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import ChiefGuest from '../components/ChiefGuest';
 import Events from '../components/Events';
 import AboutAcharyaSection from '../components/AboutAcharyaSection';
 import TimelineComponent from '../components/TimelineComponent';
@@ -20,6 +21,7 @@ function Home() {
         <main className="pt-8 w-full overflow-x-hidden pb-24">
           <Hero />
           <About />
+          <ChiefGuest />
           <SponsorsAndPartners />
           <Events />
           <AboutAcharyaSection />
