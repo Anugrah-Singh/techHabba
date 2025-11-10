@@ -24,34 +24,22 @@
           "description": ""
         },
         {
-          "time": "1:00 PM - 2:00 PM",
-          "title": "Lunch & Networking Break",
-          "category": "break",
-          "description": ""
-        },
-        {
-          "time": "2:00 PM - 3:30 PM",
-          "title": "Competitive Programming (CP)",
+          "time": "1:00 PM - 5:00 PM",
+          "title": "Prompt to Product",
           "category": "tech",
-          "description": "A classic test of logic and coding prowess against the clock."
+          "description": ""
         },
         {
           "time": "2:00 PM - 5:00 PM",
           "title": "Chess Tournament",
           "category": "non-tech",
-          "description": "A battle of wits and strategy for the grandmasters of the 64 squares."
-        },
-        {
-          "time": "3:30 PM - 5:30 PM",
-          "title": "Capture The Flag (CTF)",
-          "category": "tech",
-          "description": "A cybersecurity challenge where teams navigate digital mazes to find hidden flags."
+          "description": ""
         },
         {
           "time": "3:30 PM - 5:30 PM",
           "title": "Treasure Hunt",
           "category": "non-tech",
-          "description": "A fun-filled, mind-bending hunt across the campus that tests problem-solving and teamwork."
+          "description": ""
         }
       ]
     },
@@ -61,14 +49,14 @@
       "date": "Day 2",
       "events": [
         {
-          "time": "9:00 AM - 1:00 PM",
-          "title": "Deep-Dive Workshop",
+          "time": "9:00 AM - 11:30 AM",
+          "title": "Competitive Programming",
           "category": "tech",
           "description": ""
         },
         {
-          "time": "9:00 AM - 1:00 PM",
-          "title": "Prompt to Product",
+          "time": "11:30 AM - 1:00 PM",
+          "title": "Capture The Flag",
           "category": "tech",
           "description": ""
         },
@@ -92,13 +80,13 @@
         },
         {
           "time": "2:00 PM onwards",
-          "title": "Hackathon Commences",
+          "title": "Hackathon Begins",
           "category": "tech",
-          "description": "24-hour flagship event begins"
+          "description": ""
         },
         {
           "time": "2:30 PM onwards",
-          "title": "Bridge Building Competition",
+          "title": "Bridge Building",
           "category": "tech",
           "description": ""
         },
@@ -116,8 +104,14 @@
       "date": "Day 3",
       "events": [
         {
+          "time": "9:00 AM - 1:00 PM",
+          "title": "Deep-Dive Workshop",
+          "category": "tech",
+          "description": ""
+        },
+        {
           "time": "9:00 AM - 12:00 PM",
-          "title": "CAED (Computer-Aided Engineering Drawing)",
+          "title": "CAED",
           "category": "tech",
           "description": ""
         },
@@ -125,13 +119,13 @@
           "time": "2:00 PM",
           "title": "Hackathon Concludes",
           "category": "tech",
-          "description": "End of 24-hour hackathon"
+          "description": ""
         },
         {
           "time": "2:30 PM - 4:00 PM",
-          "title": "Valorant (Valo) Tournament",
+          "title": "Valorant Tournament",
           "category": "non-tech",
-          "description": "E-Sports Finals & Showdown"
+          "description": ""
         },
         {
           "time": "4:30 PM - 5:30 PM",
@@ -142,14 +136,26 @@
       ]
     },
     "ongoing": {
-      "title": "Ongoing Event (Throughout the Fest)",
+      "title": "Ongoing Events",
       "description": "Continuous activities running across all three days",
       "events": [
         {
-          "time": "Throughout the Fest",
+          "time": "Throughout",
           "title": "Spontaneous Quiz",
           "category": "non-tech",
-          "description": "Stay alert! A quizmaster will be roaming the campus with brain teasers and trivia. Fun prizes await those with quick wits!"
+          "description": ""
+        },
+        {
+          "time": "Throughout",
+          "title": "Project Presentation",
+          "category": "tech",
+          "description": ""
+        },
+        {
+          "time": "Day 1",
+          "title": "Experience Zone",
+          "category": "general",
+          "description": ""
         }
       ]
     }
