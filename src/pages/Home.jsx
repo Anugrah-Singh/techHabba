@@ -26,7 +26,6 @@ function Home() {
           <Events />
           <AboutAcharyaSection />
           <TimelineComponent />
-          <SponsorsAndPartners />
           {/* <Sponsors /> */}
           <NewCTA />
         </main>
