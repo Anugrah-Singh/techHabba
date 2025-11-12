@@ -29,7 +29,7 @@ const technicalEvents = [
 ];
 
 // Events with filled slots (registrations closed)
-const disabledEvents = ['Ideathon', 'Technical Workshop'];
+const disabledEvents = ['Ideathon', 'Technical Workshop', 'Chess Tournament'];
 
 const gamingEvents = [
   'FIFA (EA FC 24 or Latest Version)',
@@ -533,19 +533,28 @@ function Register() {
                     Non-Technical Events
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
-                    {nonTechnicalEvents.map(event => (
-                      <label key={event} className="flex items-center space-x-3 text-gray-300 hover:text-white cursor-pointer">
-                        <input
-                          type="checkbox"
-                          name="selectedEvents"
-                          value={event}
-                          checked={formData.selectedEvents.includes(event)}
-                          onChange={handleInputChange}
-                          className="w-5 h-5 rounded border-neutral-600 bg-neutral-800 text-green-600 focus:ring-2 focus:ring-green-500"
-                        />
-                        <span>{event}</span>
-                      </label>
-                    ))}
+                    {nonTechnicalEvents.map(event => {
+                      const isDisabled = disabledEvents.includes(event);
+                      return (
+                        <label 
+                          key={event} 
+                          className={`flex items-center space-x-3 ${isDisabled ? 'text-gray-500 cursor-not-allowed' : 'text-gray-300 hover:text-white cursor-pointer'}`}>
+                          <input
+                            type="checkbox"
+                            name="selectedEvents"
+                            value={event}
+                            checked={formData.selectedEvents.includes(event)}
+                            onChange={handleInputChange}
+                            disabled={isDisabled}
+                            className="w-5 h-5 rounded border-neutral-600 bg-neutral-800 text-green-600 focus:ring-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                          />
+                          <span className="flex-1">
+                            {event}
+                            {isDisabled && <span className="ml-2 text-xs text-red-400">(Slots Filled)</span>}
+                          </span>
+                        </label>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
