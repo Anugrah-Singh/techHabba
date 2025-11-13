@@ -29,7 +29,7 @@ const technicalEvents = [
 ];
 
 // Events with filled slots (registrations closed)
-const disabledEvents = ['Ideathon', 'Technical Workshop', 'Chess Tournament'];
+const disabledEvents = ['Ideathon', 'Technical Workshop', 'Chess Tournament', 'TREASURE HUNT'];
 
 const gamingEvents = [
   'FIFA (EA FC 24 or Latest Version)',
