@@ -231,28 +231,26 @@ function Register() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Tech Habba 2025 Registration
             </h1>
-            <p className="text-lg text-gray-300">
-              Fill in your details to register for the biggest tech event of the year
-            </p>
             
-            {/* Hackathon Registration Note */}
-            <div className="mt-6 mx-auto max-w-2xl bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-purple-900/40 border-2 border-purple-500/50 rounded-xl p-6 shadow-lg shadow-purple-500/20">
-              <div className="flex items-center justify-center mb-3">
-                <span className="text-3xl mr-3">💻</span>
-                <h3 className="text-xl font-bold text-white">Looking for Hackathon Registration?</h3>
+            {/* Registration Closed Notice */}
+            <div className="mt-6 mx-auto max-w-2xl bg-gradient-to-r from-red-900/40 via-orange-900/40 to-red-900/40 border-2 border-red-500/50 rounded-xl p-8 shadow-lg shadow-red-500/20">
+              <div className="flex items-center justify-center mb-4">
+                <span className="text-5xl mr-3">🎉</span>
+                <h2 className="text-3xl font-bold text-white">Registrations Closed</h2>
+                <span className="text-5xl ml-3">🎊</span>
               </div>
-              <p className="text-gray-300 mb-4">
-                To register for our 24-hour Hackathon, please visit the dedicated registration portal
+              <p className="text-xl text-gray-200 font-semibold mb-3">
+                Tech Habba 2025 has concluded!
               </p>
-              <button
-                disabled
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-gray-400 font-bold rounded-lg cursor-not-allowed opacity-60 shadow-lg">
-                Click Here for Hackathon Registration
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
+              <p className="text-gray-300 mb-2">
+                Thank you to everyone who participated and made this event a grand success.
+              </p>
+              <p className="text-gray-400 text-sm">
+                Registrations are now closed. Stay tuned for future events!
+              </p>
             </div>
+            
+
             
             {/* TESTING ONLY - Uncomment to test success dialog */}
             {/* <button
@@ -327,7 +325,7 @@ function Register() {
           <form
             action="https://send.pageclip.co/MMxJt1kw10ZnoxIyrGuHyYvR0TzZjZ2l/Registrations"
             method="post"
-            className="pageclip-form bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-2xl p-8 space-y-8"
+            className="pageclip-form bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-2xl p-8 space-y-8 opacity-60 pointer-events-none"
             onSubmit={handleSubmit}>
             
             {/* Section 1: Basic Details */}
@@ -781,15 +779,14 @@ function Register() {
               <button
                 type="button"
                 onClick={() => navigate('/')}
-                className="w-full sm:w-auto px-8 py-3 bg-red-900/30 border border-red-700/50 rounded-lg text-red-400 font-medium hover:bg-red-800/40 hover:border-red-600 hover:text-red-300 transition-all">
-                Cancel
+                className="w-full sm:w-auto px-8 py-3 bg-blue-900/30 border border-blue-700/50 rounded-lg text-blue-400 font-medium hover:bg-blue-800/40 hover:border-blue-600 hover:text-blue-300 transition-all pointer-events-auto">
+                Back to Home
               </button>
               <button
                 type="submit"
-                onClick={(e) => console.log('🖱️ Submit button clicked!', e)}
-                className="pageclip-form__submit w-full sm:flex-1 inline-flex h-12 items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:opacity-50 disabled:cursor-not-allowed animate-[shimmer_2s_linear_infinite]"
-                disabled={isSubmitting || formData.selectedEvents.length === 0}>
-                <span className="text-white font-semibold">{isSubmitting ? 'Submitting...' : 'Submit Registration'}</span>
+                disabled
+                className="w-full sm:flex-1 inline-flex h-12 items-center justify-center rounded-md border border-red-800 bg-red-900/50 px-6 font-medium cursor-not-allowed opacity-50">
+                <span className="text-red-400 font-semibold">Registrations Closed</span>
               </button>
             </div>
           </form>
